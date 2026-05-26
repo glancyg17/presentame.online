@@ -1,0 +1,20 @@
+# presentame.
+
+> Professional, SEO-optimised websites for small businesses — from just £50.
+
+presentame. is a UK-based web design and development service specialising in beautiful, fast, and SEO-ready websites for small businesses. Every site is built with clean code, optimised for search engines and AI discovery, and includes a custom domain.
+
+## Services
+
+- **Simple Website** — A fully SEO and GEO optimised website, mobile-first, with custom domain included. One-time fee of £50.
+- **Hosting & Maintenance** — Reliable hosting, content updates, performance monitoring, and security checks. £10/month, cancel any time.
+- **Bespoke Build** — Fully custom web design and development for businesses with more complex requirements. E-commerce, booking systems, API integrations. Priced on enquiry.
+
+## Contact
+
+- Email: hello@presentame.online
+- Website: https://presentame.online
+
+## Notes
+
+presentame. does not use page builders or templates. All sites are hand-coded for performance and long-term maintainability.
