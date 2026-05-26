@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — presentame.</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=Josefin+Sans:wght@100;200&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:   #0a0a09;
+      --paper: #f5f0e8;
+      --gold:  #b8975a;
+      --mid:   #6b6560;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans:  'Josefin Sans', sans-serif;
+    }
+    body {
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--serif);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.035;
+      pointer-events: none;
+    }
+    .num {
+      font-style: italic;
+      font-size: clamp(8rem, 20vw, 16rem);
+      font-weight: 300;
+      color: rgba(184,151,90,0.08);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      user-select: none;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 300;
+      color: var(--paper);
+      margin-top: -1rem;
+      margin-bottom: 1rem;
+    }
+    h1 em { font-style: italic; color: var(--gold); }
+    p {
+      font-size: 1.1rem;
+      color: var(--mid);
+      max-width: 36ch;
+      line-height: 1.9;
+      margin-bottom: 3rem;
+    }
+    a {
+      font-family: var(--sans);
+      font-weight: 200;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: var(--gold);
+      text-decoration: none;
+      padding: 1rem 2.5rem;
+      transition: background 0.3s;
+    }
+    a:hover { background: #d4b37a; }
+    .logo {
+      position: fixed; top: 2rem; left: 50%; transform: translateX(-50%);
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: 1rem;
+      color: var(--mid);
+      text-decoration: none;
+      text-align: center;
+    }
+    .logo span {
+      display: block;
+      font-family: var(--sans);
+      font-weight: 100;
+      font-size: 0.5rem;
+      letter-spacing: 0.35em;
+      color: rgba(184,151,90,0.4);
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <a href="/" class="logo" aria-label="presentame. home">presentame.<span>online</span></a>
+  <p class="num" aria-hidden="true">404</p>
+  <h1>This page doesn't <em>exist</em>.</h1>
+  <p>The page you're looking for has moved, or never was. Let's get you back somewhere familiar.</p>
+  <a href="/">Return home</a>
+</body>
+</html>
