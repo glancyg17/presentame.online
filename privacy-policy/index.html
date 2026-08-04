@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aviso de Privacidad — presentame.</title>
+<meta name="description" content="Cómo presentame. recopila, usa y protege tu información.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://presentame.online/privacy-policy/">
+<link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://presentame.online/privacy-policy/">
+<meta property="og:title" content="Aviso de Privacidad — presentame.">
+<meta property="og:description" content="Cómo presentame. recopila, usa y protege tu información.">
+<meta property="og:image" content="https://presentame.online/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="presentame.">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aviso de Privacidad — presentame.">
+<meta name="twitter:description" content="Cómo presentame. recopila, usa y protege tu información.">
+<meta name="twitter:image" content="https://presentame.online/assets/images/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F3EC;
+    --ink:#211D17;
+    --rust:#B5542E;
+    --rust-dark:#9A4423;
+    --green:#3D7A5C;
+    --line:#D8CFBC;
+    --card:#FAFAF8;
+    --ink-soft:#5C5648;
+    --max:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--rust);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px;}
+  a:hover{text-decoration-color:var(--rust);}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}
+  .doc{max-width:680px;margin:0 auto;padding:0 20px;}
+  h1,h2{font-family:'Fraunces',serif;font-weight:600;letter-spacing:-0.01em;line-height:1.15;}
+  .mono{font-family:'Space Mono',monospace;}
+
+  nav{border-bottom:1px solid var(--line);}
+  .navrow{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 20px;
+    max-width:var(--max);margin:0 auto;
+  }
+  .logo{font-family:'Fraunces',serif;font-weight:600;font-size:20px;text-decoration:none;color:var(--ink);}
+  .logo span{color:var(--rust);}
+  .nav-back{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);}
+
+  .doc-header{padding:36px 0 24px;border-bottom:1px solid var(--line);margin-bottom:32px;}
+  .doc-header .eyebrow{
+    font-family:'Space Mono',monospace;
+    font-size:11px;letter-spacing:0.1em;text-transform:uppercase;
+    color:var(--rust);margin-bottom:10px;
+  }
+  .doc-header h1{font-size:28px;margin-bottom:8px;}
+  .doc-header .updated{font-size:13px;color:var(--ink-soft);}
+
+  .doc p{font-size:15px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;}
+  .doc p strong{color:var(--ink);font-weight:600;}
+  .doc ul{margin:0 0 14px 0;padding-left:20px;}
+  .doc li{font-size:15px;line-height:1.6;color:var(--ink-soft);margin-bottom:7px;}
+  .doc li strong{color:var(--ink);}
+
+  section.doc-section{padding-bottom:30px;}
+  .doc-section h2{font-size:19px;margin-bottom:12px;margin-top:0;}
+  .doc-section .num{
+    font-family:'Space Mono',monospace;
+    font-size:12px;color:var(--rust);
+    margin-right:8px;
+  }
+
+  .info-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:18px 20px;
+    margin:18px 0;
+  }
+  .info-card p{margin-bottom:0;font-size:14px;}
+  .info-card p+p{margin-top:8px;}
+
+  .table-wrap{overflow-x:auto;margin:18px 0;}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  th{
+    text-align:left;
+    font-family:'Space Mono',monospace;
+    font-size:10.5px;text-transform:uppercase;letter-spacing:0.04em;
+    color:var(--ink-soft);
+    padding:8px 12px;
+    border-bottom:1.5px solid var(--ink);
+    white-space:nowrap;
+  }
+  td{
+    padding:10px 12px;
+    border-bottom:1px solid var(--line);
+    color:var(--ink-soft);
+    vertical-align:top;
+  }
+  td:first-child{color:var(--ink);font-weight:600;white-space:nowrap;}
+
+  .contact-card{
+    background:var(--ink);
+    color:var(--paper);
+    border-radius:6px;
+    padding:22px 20px;
+    margin:24px 0 8px;
+  }
+  .contact-card h2{color:var(--paper);font-size:17px;margin-bottom:8px;}
+  .contact-card p{color:#C9C2B0;font-size:14px;margin-bottom:10px;}
+  .contact-card .email-tag{
+    display:inline-block;
+    font-family:'Space Mono',monospace;
+    font-size:13px;color:var(--paper);
+    background:rgba(247,243,236,0.1);
+    padding:8px 12px;border-radius:3px;
+    border:1px solid rgba(247,243,236,0.2);
+  }
+
+  footer{border-top:1px solid var(--line);padding:24px 0;margin-top:30px;}
+  .footer-bottom{
+    font-size:11px;color:var(--ink-soft);
+    font-family:'Space Mono',monospace;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+    max-width:var(--max);margin:0 auto;padding:0 20px;
+  }
+
+  @media(min-width:860px){
+    .doc-header h1{font-size:34px;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="navrow">
+    <a href="/" class="logo">presentame<span>.</span></a>
+    <a href="/" class="nav-back">← volver al inicio</a>
+  </div>
+</nav>
+
+<div class="doc">
+
+  <div class="doc-header">
+    <div class="eyebrow">Legal</div>
+    <h1>Aviso de Privacidad</h1>
+    <div class="updated mono">Última actualización: julio de 2026</div>
+  </div>
+
+  <section class="doc-section">
+    <p>presentame. ("nosotros") construye y aloja sitios web para pequeños negocios en Latinoamérica. Esta página explica qué información recopilamos cuando nos contactas, consultas sobre un sitio web, o visitas este sitio — y qué hacemos con ella.</p>
+    <p>La mantenemos breve porque mantenemos nuestra operación simple: el único rastreo en este sitio es de medición publicitaria, solo se activa si lo aceptas mediante el aviso, y no vendemos ni compartimos tu información con nadie fuera de las pocas herramientas listadas abajo que nos ayudan a entregar el servicio.</p>
+  </section>
+
+  <section class="doc-section">
+    <h2><span class="num">01</span>Cookies</h2>
+    <p>Usamos una sola herramienta de rastreo: el <strong>Meta Pixel</strong>, que nos ayuda a entender qué anuncios llevaron a que alguien nos contactara o comprara un sitio web. Solo está activo si haces clic en <strong>Aceptar</strong> en el aviso que aparece la primera vez que visitas el sitio — si haces clic en <strong>Rechazar</strong>, o simplemente no respondes, no se activa ninguna cookie de Meta ni se envía información. Puedes cambiar tu elección en cualquier momento borrando los datos del sitio en tu navegador para presentame.online.</p>
+    <p>Fuera de esto, no usamos cookies de publicidad o rastreo de ningún otro tipo. Nuestra herramienta de analítica (Umami, ver abajo) no usa cookies en absoluto, con o sin consentimiento.</p>
+  </section>
+
+  <section class="doc-section">
+    <h2><span class="num">02</span>Qué recopilamos, y por qué</h2>
+    <p>Solo recopilamos la información que tú decides darnos, o datos técnicos básicos necesarios para entender cómo se usa el sitio. No recopilamos más de lo que necesitamos.</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr>
+          <th>Cuándo</th>
+          <th>Qué recopilamos</th>
+          <th>Por qué</th>
+        </tr>
+        <tr>
+          <td>Formulario de inicio / consulta</td>
+          <td>Nombre del negocio, tu nombre, teléfono, correo electrónico, número de WhatsApp (si lo das), detalles del negocio, y lo que escribas en los campos de mensaje o notas</td>
+          <td>Para entender tu negocio y responder con una cotización y los siguientes pasos</td>
+        </tr>
+        <tr>
+          <td>Formulario de contacto en el sitio de un cliente</td>
+          <td>Nombre, correo o teléfono, y tu mensaje</td>
+          <td>Para que el negocio al que contactas pueda responder tu consulta</td>
+        </tr>
+        <tr>
+          <td>WhatsApp</td>
+          <td>Tu número de teléfono y el contenido del mensaje</td>
+          <td>Para responder tu pregunta o platicar sobre tu proyecto</td>
+        </tr>
+        <tr>
+          <td>Al hacer un pago</td>
+          <td>Datos de pago (manejados enteramente por Stripe — nunca vemos ni guardamos los datos de tu tarjeta)</td>
+          <td>Para procesar el pago de la construcción del sitio o el hosting</td>
+        </tr>
+        <tr>
+          <td>Al navegar este sitio</td>
+          <td>Analítica anónima y agregada — vistas de página, ubicación general (a nivel país/región), tipo de dispositivo. Ningún visitante individual es identificado.</td>
+          <td>Para entender qué páginas son útiles y corregir lo que no funciona</td>
+        </tr>
+        <tr>
+          <td>Al navegar este sitio, <em>si aceptas el aviso de cookies</em></td>
+          <td>Datos del Meta Pixel: páginas vistas, botones presionados, y datos de contacto encriptados (hash) de los campos de formulario que llenes</td>
+          <td>Para medir qué anuncios de Facebook/Instagram funcionan y mejorar su segmentación</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="doc-section">
+    <h2><span class="num">03</span>Las herramientas que usamos</h2>
+    <p>Dependemos de un número reducido de servicios externos de confianza para operar este sitio y responder consultas. Cada uno solo recibe la información necesaria para hacer su trabajo específico.</p>
+
+    <div class="info-card">
+      <p><strong>FormSubmit</strong> — procesa los envíos de formularios de este sitio y los entrega directo a nuestro correo. FormSubmit no usa cookies en nuestros formularios.</p>
+      <p><strong>Stripe</strong> — procesa todos los pagos. Stripe cumple con el estándar PCI y nunca vemos ni guardamos los datos completos de tu tarjeta.</p>
+      <p><strong>Umami Analytics</strong> — una herramienta de analítica enfocada en privacidad, sin cookies. Nos dice de forma agregada cuánta gente visita, qué páginas ven, y aproximadamente desde dónde — sin identificar visitantes individuales ni rastrear a nadie en otros sitios web.</p>
+      <p><strong>Google Workspace / Gmail</strong> — usamos Gmail para enviar y recibir correos de consultas.</p>
+      <p><strong>GitHub Pages</strong> — aloja los archivos de este sitio web.</p>
+    </div>
+
+    <p><strong>Meta Pixel</strong> — usado solo si aceptas el aviso de cookies. Nos ayuda a ver qué anuncios de Facebook/Instagram llevaron a una consulta o venta. Meta puede activar cookies y recibir datos de contacto encriptados que ingreses en formularios de este sitio (por ejemplo, una versión encriptada de tu correo, no el correo mismo) para mejorar la segmentación de anuncios. Consulta el propio aviso de privacidad de Meta para saber cómo manejan estos datos. No usamos Google Analytics ni ningún otro rastreador de publicidad o retargeting.</p>
+  </section>
+
+  <section class="doc-section">
+    <h2><span class="num">04</span>Cuánto tiempo conservamos tu información</h2>
+    <p>Si nos consultas pero no continúas con un sitio web, conservaremos tus datos hasta por 12 meses por si quieres retomarlo, y después los eliminamos. Si te vuelves cliente, conservamos la información necesaria para operar tu sitio y hosting mientras seas cliente, más un periodo razonable después para nuestros propios registros (típicamente hasta 5 años, conforme a la práctica contable habitual en México).</p>
+  </section>
+
+  <section class="doc-section">
+    <h2><span class="num">05</span>Tus derechos</h2>
+    <p>Conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP), tienes derecho a:</p>
+    <ul>
+      <li><strong>Acceder</strong> a la información que tenemos sobre ti</li>
+      <li><strong>Rectificar</strong> cualquier dato inexacto</li>
+      <li><strong>Cancelar (eliminar)</strong> tu información, cuando no estemos obligados a conservarla por razones legales o contables</li>
+      <li><strong>Oponerte</strong> al uso de tu información para un fin particular</li>
+    </ul>
+    <p>Estos son los llamados derechos ARCO. Para ejercer cualquiera de ellos, solo escríbenos — ve abajo. Responderemos dentro de 20 días hábiles.</p>
+  </section>
+
+  <section class="doc-section">
+    <h2><span class="num">06</span>Con quién compartimos información</h2>
+    <p>No vendemos tu información, ni la compartimos con anunciantes. Lo único que compartimos es con las herramientas listadas en la sección 3, cada una de las cuales procesa datos únicamente para ayudarnos a entregarte el servicio. Si eres cliente con un sitio web, los envíos del formulario de contacto de tu sitio llegan directo a tu propio correo, no al nuestro.</p>
+  </section>
+
+  <section class="doc-section">
+    <h2><span class="num">07</span>Cambios a este aviso</h2>
+    <p>Si cambiamos cómo recopilamos o usamos información, actualizaremos esta página y la fecha en la parte superior. Para cualquier cambio importante, avisaremos directamente a los clientes existentes.</p>
+  </section>
+
+  <div class="contact-card">
+    <h2>¿Preguntas sobre tus datos?</h2>
+    <p>Escríbenos y te responderemos — normalmente en menos de un día.</p>
+    <div class="email-tag">hola@presentame.online</div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <span>presentame.</span>
+    <span>hola@presentame.online</span>
+  </div>
+</footer>
+
+</body>
+</html>

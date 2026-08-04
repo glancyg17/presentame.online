@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuéntanos sobre tu negocio — presentame.</title>
+<meta name="description" content="Llena tus datos y construimos tu sitio web — listo en 7 días, desde $500 MXN.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://presentame.online/get-started/details/">
+<link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://presentame.online/get-started/details/">
+<meta property="og:title" content="Cuéntanos sobre tu negocio — presentame.">
+<meta property="og:description" content="Llena tus datos y construimos tu sitio web — listo en 7 días, desde $500 MXN.">
+<meta property="og:image" content="https://presentame.online/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="presentame.">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cuéntanos sobre tu negocio — presentame.">
+<meta name="twitter:description" content="Llena tus datos y construimos tu sitio web — listo en 7 días, desde $500 MXN.">
+<meta name="twitter:image" content="https://presentame.online/assets/images/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F3EC;
+    --ink:#211D17;
+    --rust:#B5542E;
+    --rust-dark:#9A4423;
+    --green:#3D7A5C;
+    --line:#D8CFBC;
+    --card:#FAFAF8;
+    --ink-soft:#5C5648;
+    --max:1180px;
+    --form-max:640px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}
+  .form-wrap{max-width:var(--form-max);margin:0 auto;padding:0 20px;}
+
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;letter-spacing:-0.01em;line-height:1.1;}
+  .mono{font-family:'Space Mono',monospace;}
+  .hand{font-family:'Caveat',cursive;}
+  .eyebrow{
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--rust);
+    display:flex;align-items:center;gap:8px;
+  }
+  .eyebrow::before{content:'';width:14px;height:1px;background:var(--rust);}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(247,243,236,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .navrow{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 20px;
+    max-width:var(--max);margin:0 auto;
+  }
+  .logo{font-family:'Fraunces',serif;font-weight:600;font-size:20px;text-decoration:none;color:var(--ink);}
+  .logo span{color:var(--rust);}
+  .nav-back{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);}
+
+  /* ---------- PROGRESS ---------- */
+  .progress-bar{
+    height:3px;background:var(--line);
+    position:sticky;top:49px;z-index:49;
+  }
+  .progress-fill{
+    height:100%;width:14%;background:var(--rust);
+    transition:width .3s ease;
+  }
+
+  /* ---------- HEADER ---------- */
+  .form-header{padding:30px 0 24px;}
+  .form-header h1{font-size:28px;margin-bottom:10px;}
+  .form-header p{font-size:15px;color:var(--ink-soft);line-height:1.55;max-width:48ch;}
+  .time-note{
+    display:inline-flex;align-items:center;gap:6px;
+    font-family:'Space Mono',monospace;
+    font-size:11px;color:var(--green);
+    margin-top:12px;
+    background:rgba(61,122,92,0.08);
+    padding:6px 10px;border-radius:3px;
+  }
+
+  /* ---------- FORM SECTIONS ---------- */
+  .fsection{padding:24px 0;border-top:1px solid var(--line);}
+  .fsection:first-of-type{border-top:none;}
+  .fsection-label{
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    color:var(--rust);
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    margin-bottom:4px;
+    display:block;
+  }
+  .fsection-title{font-size:19px;margin-bottom:18px;}
+
+  .field{margin-bottom:18px;}
+  .field:last-child{margin-bottom:0;}
+  .field label{
+    display:block;
+    font-size:13.5px;
+    font-weight:600;
+    margin-bottom:6px;
+  }
+  .field label .opt{
+    font-weight:400;
+    color:var(--ink-soft);
+    font-family:'Space Mono',monospace;
+    font-size:10.5px;
+    text-transform:uppercase;
+    margin-left:6px;
+  }
+  .field .help{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    margin-top:5px;
+    line-height:1.4;
+  }
+  input[type="text"], input[type="tel"], input[type="email"], textarea, select{
+    width:100%;
+    background:var(--card);
+    border:1.5px solid var(--line);
+    border-radius:4px;
+    padding:13px 14px;
+    font-family:'Inter',sans-serif;
+    font-size:15px;
+    color:var(--ink);
+    transition:border-color .15s ease;
+  }
+  input::placeholder, textarea::placeholder{color:#A8A091;}
+  input:focus, textarea:focus, select:focus{
+    outline:none;
+    border-color:var(--rust);
+  }
+  textarea{resize:vertical;min-height:84px;line-height:1.5;}
+
+  /* toggle / radio pills */
+  .pill-group{display:flex;gap:8px;flex-wrap:wrap;}
+  .pill{
+    border:1.5px solid var(--line);
+    background:var(--card);
+    padding:10px 16px;
+    border-radius:20px;
+    font-size:13.5px;
+    cursor:pointer;
+    transition:all .15s ease;
+  }
+  .pill.selected{
+    background:var(--ink);
+    color:var(--paper);
+    border-color:var(--ink);
+  }
+
+  /* checkbox row for features */
+  .check-row{display:flex;flex-direction:column;gap:10px;}
+  .check-option{
+    display:flex;align-items:center;gap:10px;
+    border:1.5px solid var(--line);
+    background:var(--card);
+    padding:12px 14px;
+    border-radius:4px;
+    font-size:13.5px;
+    cursor:pointer;
+  }
+  .check-option input{width:auto;flex-shrink:0;accent-color:var(--rust);width:17px;height:17px;}
+
+  /* conditional reveal */
+  .reveal{
+    display:none;
+    margin-top:12px;
+    padding:14px;
+    background:rgba(181,84,46,0.05);
+    border:1px dashed var(--rust);
+    border-radius:4px;
+  }
+  .reveal.show{display:block;}
+
+  /* optional accordion */
+  .optional-toggle{
+    width:100%;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:14px 16px;
+    display:flex;align-items:center;justify-content:space-between;
+    font-size:13.5px;font-weight:600;
+    cursor:pointer;
+  }
+  .optional-toggle .chev{
+    font-family:'Space Mono',monospace;
+    color:var(--rust);
+    transition:transform .2s ease;
+  }
+  .optional-toggle.open .chev{transform:rotate(180deg);}
+  .optional-body{
+    display:none;
+    padding-top:18px;
+  }
+  .optional-body.show{display:block;}
+
+  /* asset note */
+  .asset-note{
+    background:var(--ink);
+    color:var(--paper);
+    border-radius:6px;
+    padding:20px 18px;
+    margin-top:8px;
+  }
+  .asset-note h3{font-size:15.5px;color:var(--paper);margin-bottom:6px;}
+  .asset-note p{font-size:13px;color:#C9C2B0;line-height:1.55;}
+  .asset-note .email-tag{
+    display:inline-block;
+    margin-top:10px;
+    font-family:'Space Mono',monospace;
+    font-size:12.5px;
+    color:var(--paper);
+    background:rgba(247,243,236,0.1);
+    padding:8px 12px;
+    border-radius:3px;
+    border:1px solid rgba(247,243,236,0.2);
+  }
+
+  /* submit */
+  .submit-zone{padding:28px 0 50px;}
+  .btn-submit{
+    width:100%;
+    background:var(--rust);
+    color:var(--paper);
+    font-family:'Space Mono',monospace;
+    font-size:14px;
+    text-align:center;
+    padding:17px 20px;
+    border-radius:4px;
+    border:1px solid var(--rust-dark);
+    box-shadow:0 3px 0 var(--rust-dark);
+    cursor:pointer;
+    transition:transform .15s ease;
+  }
+  .btn-submit:active{transform:translateY(3px);box-shadow:none;}
+  .submit-note{
+    text-align:center;
+    font-size:12px;
+    color:var(--ink-soft);
+    margin-top:12px;
+  }
+
+  @media(min-width:860px){
+    .form-header h1{font-size:34px;}
+    .fsection{padding:32px 0;}
+    .pill-group{gap:10px;}
+  }
+</style>
+</head>
+<body>
+<!-- Cookie Consent (Meta Pixel) -->
+<div id="fp-consent" style="position:fixed;left:0;right:0;bottom:0;z-index:9999;display:none;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;background:#211D17;color:#F7F3EC;font-family:'Inter',sans-serif;font-size:12.5px;line-height:1.5;padding:12px 16px;box-shadow:0 -2px 10px rgba(0,0,0,.18);">
+  <span style="max-width:560px;">Usamos cookies de medición publicitaria (Meta Pixel) solo si las aceptas. <a href="/privacy-policy/" style="color:#B5542E;">Aviso de privacidad</a></span>
+  <span style="display:flex;gap:8px;">
+    <button id="fp-decline" style="background:transparent;border:1px solid #5C5648;color:#F7F3EC;padding:5px 12px;font-size:12px;border-radius:3px;cursor:pointer;font-family:inherit;">Rechazar</button>
+    <button id="fp-accept" style="background:#B5542E;border:1px solid #B5542E;color:#F7F3EC;padding:5px 12px;font-size:12px;border-radius:3px;cursor:pointer;font-family:inherit;">Aceptar</button>
+  </span>
+</div>
+<script>
+(function(){
+  function fpLoadPixel(){
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '866982179477687');
+    fbq('track', 'PageView');
+  }
+  var c = localStorage.getItem('fp_ad_consent');
+  var banner = document.getElementById('fp-consent');
+  if(c === 'granted'){
+    fpLoadPixel();
+  } else if(c !== 'denied' && banner){
+    banner.style.display = 'flex';
+  }
+  if(banner){
+    document.getElementById('fp-accept').addEventListener('click', function(){
+      localStorage.setItem('fp_ad_consent','granted');
+      banner.style.display = 'none';
+      fpLoadPixel();
+    });
+    document.getElementById('fp-decline').addEventListener('click', function(){
+      localStorage.setItem('fp_ad_consent','denied');
+      banner.style.display = 'none';
+    });
+  }
+})();
+</script>
+<!-- End Cookie Consent -->
+
+
+<nav>
+  <div class="navrow">
+    <a href="/" class="logo">presentame<span>.</span></a>
+    <a href="#" class="nav-back">← volver</a>
+  </div>
+</nav>
+<div class="progress-bar"><div class="progress-fill"></div></div>
+
+<div class="form-wrap">
+
+  <div class="form-header">
+    <div class="eyebrow">Paso 2 de 2</div>
+    <h1>Vamos con tus datos.</h1>
+    <p>Llena lo que puedas abajo — los campos con asterisco son los que realmente necesitamos para empezar.</p>
+  </div>
+
+  <form id="intake-form" action="https://formsubmit.co/hola@presentame.online" method="POST">
+    <input type="hidden" name="_subject" value="Nueva solicitud de sitio — formulario get-started">
+    <input type="hidden" name="_next" value="https://presentame.online/thank-you-enquiry">
+    <input type="hidden" name="_template" value="table">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+    <!-- ABOUT THE BUSINESS -->
+    <div class="fsection">
+      <span class="fsection-label">Sobre tu negocio</span>
+      <h2 class="fsection-title">Lo básico</h2>
+
+      <div class="field">
+        <label>Nombre del negocio *</label>
+        <input type="text" name="Business name" placeholder="ej. Plomería Hernández" required>
+        <div class="help">Exactamente como quieres que aparezca en el sitio.</div>
+      </div>
+
+      <div class="field">
+        <label>¿A qué te dedicas? *</label>
+        <textarea name="What they do" placeholder="Una o dos frases — ej. 'Negocio familiar de plomería y calefacción, atendiendo Campeche y alrededores desde 2015.'" required></textarea>
+      </div>
+
+      <div class="field">
+        <label>¿Qué tipo de negocio es? *</label>
+        <select name="Business type" required>
+          <option value="" disabled selected>Elige la opción que más se parezca</option>
+          <option>Oficio (plomero, electricista, constructor, etc.)</option>
+          <option>Tienda / comercio</option>
+          <option>Salón / cuidado personal</option>
+          <option>Café / comida y bebida</option>
+          <option>Servicios profesionales (consultoría, legal, etc.)</option>
+          <option>Otro</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>¿Dónde estás ubicado? *</label>
+        <input type="text" name="Location" placeholder="Ciudad / municipio" required>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="fsection">
+      <span class="fsection-label">Datos de contacto</span>
+      <h2 class="fsection-title">Cómo te encuentran los clientes</h2>
+
+      <div class="field">
+        <label>Número de teléfono *</label>
+        <input type="tel" name="Phone" placeholder="9xx xxx xxxx" required>
+      </div>
+
+      <div class="field">
+        <label>Correo electrónico *</label>
+        <input type="email" name="Email" placeholder="tu@negocio.com" required>
+        <div class="help">Aquí llegarán las consultas del formulario de contacto de tu nuevo sitio.</div>
+      </div>
+
+      <div class="field">
+        <label>WhatsApp *</label>
+        <input type="hidden" name="WhatsApp status" id="whatsapp-choice-input" required>
+        <div class="pill-group" id="whatsapp-pills">
+          <div class="pill" data-value="same">Igual que el teléfono</div>
+          <div class="pill" data-value="number">Usar otro número</div>
+          <div class="pill" data-value="none">No tengo WhatsApp</div>
+        </div>
+        <div class="reveal" id="whatsapp-reveal">
+          <label>Número de WhatsApp</label>
+          <input type="tel" name="WhatsApp number" placeholder="9xx xxx xxxx">
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="fsection">
+      <span class="fsection-label">Servicios y precios</span>
+      <h2 class="fsection-title">Lo que ofreces</h2>
+
+      <div class="field">
+        <label>Enlista tus servicios *</label>
+        <textarea name="Services" placeholder="Uno por línea es más fácil, ej.&#10;Instalación de calentadores&#10;Servicios de emergencia&#10;Plomería de baños" required></textarea>
+      </div>
+
+      <div class="field">
+        <label>¿Quieres mostrar precios en el sitio? *</label>
+        <input type="hidden" name="Show prices on site" id="price-choice-input">
+        <div class="pill-group" id="price-pills">
+          <div class="pill" data-value="Yes">Sí, mostrar precios</div>
+          <div class="pill" data-value="No">No, dejarlos fuera</div>
+        </div>
+        <div class="reveal" id="price-reveal">
+          <label>Adelante, enlístalos</label>
+          <textarea name="Price list" placeholder="ej.&#10;Servicio de calentador — $800 MXN&#10;Visita de emergencia — desde $600 MXN"></textarea>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Horario de atención *</label>
+        <input type="text" name="Opening hours" placeholder="ej. Lun–Vie 8am–6pm, Sáb 9am–1pm" required>
+      </div>
+    </div>
+
+    <!-- DOMAIN -->
+    <div class="fsection">
+      <span class="fsection-label">Tu dirección web</span>
+      <h2 class="fsection-title">Nombre de dominio</h2>
+
+      <div class="field">
+        <label>¿Algún dominio en mente? *</label>
+        <input type="text" name="Domain preference" placeholder="ej. plomeriahernandez.mx">
+        <div class="check-option" style="margin-top:10px;">
+          <input type="checkbox" name="Domain — not sure, suggest options" value="Yes" id="domain-unsure">
+          <label for="domain-unsure" style="margin:0;font-weight:500;">No estoy seguro — sugiéreme algunas opciones</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPTIONAL EXTRAS -->
+    <div class="fsection">
+      <div class="optional-toggle" id="optional-toggle">
+        <span>Algunos detalles extra <span class="opt" style="margin-left:6px;">opcional, pero útil</span></span>
+        <span class="chev">▾</span>
+      </div>
+
+      <div class="optional-body" id="optional-body">
+
+        <div class="field">
+          <label>Instagram o Facebook</label>
+          <input type="text" name="Social links" placeholder="Links, si los tienes">
+        </div>
+
+        <div class="field">
+          <label>Tono del sitio</label>
+          <input type="hidden" name="Tone preference" id="tone-choice-input">
+          <div class="pill-group" id="tone-pills">
+            <div class="pill" data-value="Professional">Profesional</div>
+            <div class="pill" data-value="Friendly">Amigable</div>
+            <div class="pill" data-value="Bold">Atrevido</div>
+            <div class="pill" data-value="You choose">Tú decides</div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>¿Algún sitio web cuyo estilo te guste?</label>
+          <input type="text" name="Sites they like" placeholder="De la competencia o no — basta con un link">
+        </div>
+
+        <div class="field">
+          <label>Preferencia de colores</label>
+          <input type="text" name="Colour preference" placeholder="O déjalo en blanco y nosotros elegimos">
+        </div>
+
+        <div class="field">
+          <label>¿Algo más que te gustaría en el sitio?</label>
+          <div class="check-row">
+            <label class="check-option"><input type="checkbox" name="Feature — click-to-call" value="Yes"> Botón de llamada directa</label>
+            <label class="check-option"><input type="checkbox" name="Feature — WhatsApp button" value="Yes"> Botón de WhatsApp</label>
+            <label class="check-option"><input type="checkbox" name="Feature — map" value="Yes"> Mapa / cómo llegar</label>
+            <label class="check-option"><input type="checkbox" name="Feature — Google reviews" value="Yes"> Reseñas de Google en el sitio</label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ADDITIONAL NOTES -->
+    <div class="fsection">
+      <span class="fsection-label">Algo más</span>
+      <h2 class="fsection-title">Notas adicionales</h2>
+      <div class="field">
+        <label>¿Algo que no hayamos preguntado? <span class="opt">opcional</span></label>
+        <textarea name="Additional notes" placeholder="Un horario particular, la historia detrás del negocio, algo que hace la competencia que no quieres copiar, una fecha límite que tienes — lo que sea útil para nosotros."></textarea>
+      </div>
+    </div>
+
+    <!-- ASSETS -->
+    <div class="fsection">
+      <span class="fsection-label">Última cosa</span>
+      <h2 class="fsection-title">Logo y fotos</h2>
+      <div class="asset-note">
+        <h3>Envíalos directo a nuestro correo</h3>
+        <p>No hace falta subir nada aquí — solo envía tu logo y las fotos que quieras en el sitio (JPG o PNG, fotos de celular están bien) a la dirección de abajo. Cuando te sea más fácil.</p>
+        <div class="email-tag">hola@presentame.online</div>
+      </div>
+    </div>
+
+    <div class="submit-zone">
+      <button type="submit" class="btn-submit">Enviar mis datos →</button>
+    </div>
+
+  </form>
+
+</div>
+
+<script>
+  // price toggle — writes selection into hidden input so FormSubmit captures it
+  document.querySelectorAll('#price-pills .pill').forEach(p=>{
+    p.addEventListener('click',()=>{
+      document.querySelectorAll('#price-pills .pill').forEach(x=>x.classList.remove('selected'));
+      p.classList.add('selected');
+      document.getElementById('price-choice-input').value = p.dataset.value;
+      const reveal=document.getElementById('price-reveal');
+      reveal.classList.toggle('show', p.dataset.value==='Yes');
+    });
+  });
+
+  // whatsapp pills — same pattern as price, reveals number field only when "different number" chosen
+  document.querySelectorAll('#whatsapp-pills .pill').forEach(p=>{
+    p.addEventListener('click',()=>{
+      document.querySelectorAll('#whatsapp-pills .pill').forEach(x=>x.classList.remove('selected'));
+      p.classList.add('selected');
+      document.getElementById('whatsapp-choice-input').value = p.dataset.value;
+      const reveal=document.getElementById('whatsapp-reveal');
+      reveal.classList.toggle('show', p.dataset.value==='number');
+    });
+  });
+
+  // tone pills — same pattern, separate hidden input
+  document.querySelectorAll('#tone-pills .pill').forEach(p=>{
+    p.addEventListener('click',()=>{
+      document.querySelectorAll('#tone-pills .pill').forEach(x=>x.classList.remove('selected'));
+      p.classList.add('selected');
+      document.getElementById('tone-choice-input').value = p.dataset.value;
+    });
+  });
+
+  // optional accordion
+  const toggle=document.getElementById('optional-toggle');
+  const body=document.getElementById('optional-body');
+  toggle.addEventListener('click',()=>{
+    toggle.classList.toggle('open');
+    body.classList.toggle('show');
+  });
+
+  // progress bar — fills as required fields complete
+  const form=document.getElementById('intake-form');
+  const requiredFields=form.querySelectorAll('[required]');
+  function updateProgress(){
+    let filled=0;
+    requiredFields.forEach(f=>{ if(f.value && f.value.trim()!=='') filled++; });
+    const pct=Math.max(14,(filled/requiredFields.length)*100);
+    document.querySelector('.progress-fill').style.width=pct+'%';
+  }
+  form.addEventListener('input',updateProgress);
+  form.addEventListener('change',updateProgress);
+
+  // hidden inputs can't trigger native "please fill this in" prompts,
+  // so guard WhatsApp choice manually before the real submit to FormSubmit.co
+  form.addEventListener('submit',(e)=>{
+    const whatsappChoice=document.getElementById('whatsapp-choice-input').value;
+    if(!whatsappChoice){
+      e.preventDefault();
+      document.getElementById('whatsapp-pills').scrollIntoView({behavior:'smooth', block:'center'});
+      document.getElementById('whatsapp-pills').style.outline='2px solid var(--rust)';
+      document.getElementById('whatsapp-pills').style.outlineOffset='6px';
+    }
+  });
+</script>
+
+</body>
+</html>
