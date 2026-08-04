@@ -1,4 +1,4 @@
-# presentame. — Website Repo
+# preséntame. — Website Repo
 
 Static site for **presentame.online** (Mexico / LatAm market). Hosted on GitHub Pages, no build step — just plain HTML/CSS/JS files served directly. This is the Spanish-language sister site to getpresented.co.uk (UK) — same brand system, same design, localized content and MXN pricing.
 
@@ -30,8 +30,8 @@ presentame.online/
     ├── icons/
     │   └── favicon.png               ← rust dot on ink square — shared with UK brand, no text
     └── images/
-        ├── og-image.jpg              ← 1200×630px — presentame. wordmark
-        ├── logo.png                  ← presentame. wordmark, unused in HTML — for email/proposals
+        ├── og-image.jpg              ← 1200×630px — preséntame. wordmark
+        ├── logo.png                  ← preséntame. wordmark, unused in HTML — for email/proposals
         ├── kennedy.jpg               ← Portfolio carousel (shared with UK site)
         ├── ekvanmobile.jpeg          ← Portfolio carousel (shared with UK site)
         ├── casamayis.jpeg            ← Portfolio carousel
@@ -54,7 +54,7 @@ Extensionless URLs — every page is a folder with `index.html`. GitHub Pages se
 
 **Fonts:** Fraunces (display/headings), Inter (body/UI), Space Mono (prices, labels, small caps), Caveat (handwritten accents, used sparingly).
 
-**Wordmark:** lowercase throughout — `presentame.` — with the trailing period in rust (`#B5542E`).
+**Wordmark:** lowercase throughout — `preséntame.` — with the trailing period in rust (`#B5542E`).
 
 ## Making content edits
 
@@ -86,7 +86,7 @@ All links redirect to `/payment-confirmed/` after payment, matching the UK bundl
 
 - [ ] `assets/images/og-image.jpg` — generated with a system serif font as a stand-in for Fraunces; redo in Canva for a pixel-accurate match to the UK version
 - [ ] `assets/images/logo.png` — same placeholder situation as og-image
-- [ ] **WhatsApp**: no MX number yet. Every WhatsApp touchpoint (the homepage "talk" strip, the "beyond the website" CTA, the solutions page final CTA) currently points to `mailto:hola@presentame.online` instead. Once you have a number, swap these `mailto:` links back to `https://wa.me/<number>` and restore the WhatsApp-specific copy/icon (search for "hola@presentame.online" in `index.html` and `solutions/index.html` to find them — there are 3 spots plus the intake form's WhatsApp pill options, which are fine as-is since they just ask the client for *their* number).
+- [x] **WhatsApp**: +52 981 108 6380 is now live across the site (homepage talk-strip, "beyond the website" CTA, solutions page final CTA).
 - [ ] Portfolio carousel on the homepage is identical to the UK site (same 4 businesses, English quotes, untranslated per instruction) — swap in MX-specific client sites here as you build more.
 - [ ] Meta Pixel ID is currently the same as the UK site (`866982179477687`) — same Ads Manager account. Fine to share if you're tracking both markets in one place; split it out if you want MX-only ad attribution.
 
