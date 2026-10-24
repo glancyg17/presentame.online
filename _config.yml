@@ -1,0 +1,5 @@
+# Mantiene los documentos internos fuera del sitio publicado. (Si el repo es público, siguen visibles en GitHub.)
+exclude:
+  - CLAUDE.md
+  - README.md
+  - docs
