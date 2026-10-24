@@ -127,6 +127,7 @@ Confirmation pages are `noindex`. When a Stripe link is created or re-priced, cr
 6. Don't copy UK pages in without translating, and **never carry over the UK Pixel ID or UK Umami ID.**
 7. Check `<div>` balance, anchors and mobile width after edits.
 8. Client edit requests follow `docs/edit-workflow.md`.
+9. **Estilo de redacción:** que suene como una persona hablando, no como un folleto. **Sin rayas largas (—)** en el texto del sitio (usa punto, coma, dos puntos o paréntesis). Los títulos de página usan ` | ` como separador. Evita las construcciones del tipo "no es X, es Y", las listas de tres tan ordenadas y frases de relleno. Frases cortas, palabras sencillas, di lo que pasa.
 
 ## 8. Open items
 
