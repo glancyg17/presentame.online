@@ -1,0 +1,14 @@
+{
+  // presentame.online: static site served by Cloudflare Workers (static assets, no Worker code).
+  "name": "presentame-online",
+  "compatibility_date": "2026-11-05",
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+  // Custom domains are deliberately NOT set here. Adding them to this file makes
+  // `wrangler deploy` attach the domain and move live traffic. Attach them at cutover
+  // (dashboard: Workers & Pages > presentame-online > Settings > Domains & Routes), after the
+  // checklist in docs/cloudflare-migration.md is done.
+}

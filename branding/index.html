@@ -87,7 +87,6 @@
     border-radius:3px;
     white-space:nowrap;
   }
-  .nav-links{display:none;}
 
   /* ---------- HERO ---------- */
   .page-hero{padding:40px 0 8px;}
@@ -140,6 +139,46 @@
     transition:transform .15s ease;
   }
   .buy-btn:active{transform:translateY(2px);box-shadow:none;}
+
+
+  /* ---------- BRAND FEATURES (image + overlay card) ---------- */
+  .brand-features{display:flex;flex-direction:column;gap:34px;}
+  .bf{margin:0;}
+  .bf-media{position:relative;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+  .bf-media img{width:100%;height:auto;aspect-ratio:1200/833;object-fit:cover;}
+  .bf-card{padding:22px 20px 24px;border-top:1px solid var(--line);background:var(--card);}
+  .bf-tag{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--rust);margin-bottom:8px;}
+  .bf-card h3{font-size:22px;margin-bottom:4px;}
+  .bf-price{font-family:'Space Mono',monospace;font-size:14px;color:var(--rust);margin-bottom:12px;}
+  .bf-lead{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-bottom:14px;}
+  .bf-save{color:var(--ink-soft);font-size:11.5px;}
+  .bf-list{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:18px;}
+  .bf-list li{font-size:13.5px;color:var(--ink);line-height:1.4;padding-left:18px;position:relative;}
+  .bf-list li::before{content:'';position:absolute;left:0;top:0.5em;width:7px;height:7px;border-radius:50%;background:var(--green);}
+  .bf-chips{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;}
+  .bf-chips li{font-family:'Space Mono',monospace;font-size:10.5px;border:1px solid var(--line);background:var(--paper);border-radius:20px;padding:5px 10px;color:var(--ink-soft);}
+  .bf figcaption{font-family:'Space Mono',monospace;font-size:10.5px;color:var(--ink-soft);margin-top:8px;letter-spacing:0.02em;}
+  .bf-split img{max-width:420px;margin:0 auto;aspect-ratio:960/1280;}
+  .bf-split{background:var(--paper);}
+  @media(min-width:1040px){
+    .bf-card{position:absolute;border:1px solid var(--line);border-radius:8px;box-shadow:0 14px 34px rgba(33,29,23,0.16);padding:22px 22px 24px;}
+    .bf-card h3{font-size:24px;}
+    .bf--starter .bf-card{top:50%;right:3%;transform:translateY(-50%);width:31%;}
+    .bf--social .bf-card{top:50%;left:2.5%;transform:translateY(-50%);width:24.5%;padding:18px 16px 20px;}
+    .bf--social .bf-card h3{font-size:21px;}
+    .bf--social .bf-list li{font-size:12.5px;}
+    .bf--full .bf-card{left:3.5%;bottom:3.5%;width:57%;display:grid;grid-template-columns:1fr auto;column-gap:22px;align-items:end;padding:16px 22px 18px;}
+    .bf--full .bf-card .bf-main{min-width:0;}
+    .bf--full .bf-card h3{font-size:24px;margin-bottom:2px;}
+    .bf--full .bf-chips{margin-bottom:0;}
+    .bf--full .bf-card .bf-cta{width:210px;}
+    .bf--full .bf-price{margin-bottom:10px;}
+    .bf--full .bf-card .bf-tag{margin-bottom:6px;}
+    .bf-split{display:grid;grid-template-columns:minmax(0,460px) 1fr;align-items:center;gap:0;}
+    .bf-split img{max-width:none;margin:0;width:100%;aspect-ratio:960/1280;}
+    .bf-split .bf-card{position:static;transform:none;border:0;box-shadow:none;border-radius:0;background:transparent;width:auto;max-width:420px;margin:0 auto;padding:28px;}
+    .bf-split .bf-card h3{font-size:28px;}
+  }
 
   /* ---------- BUNDLES ---------- */
   .bundles{border-top:1px solid var(--line);}
@@ -228,7 +267,6 @@
 
   /* ---------- DESKTOP ---------- */
   @media(min-width:860px){
-    .nav-links{display:flex;gap:28px;font-size:14px;}
     .page-hero{padding:64px 0 12px;}
     .page-hero h1{font-size:44px;}
     .page-hero p{font-size:17px;}
@@ -236,6 +274,27 @@
     .section-head h2{font-size:30px;}
     .product-grid{grid-template-columns:repeat(2,1fr);gap:20px;}
     .bundle-grid{grid-template-columns:repeat(3,1fr);gap:20px;}
+  }
+
+  /* ---------- NAV: burger menu (mobile) ---------- */
+  .navrow{position:relative;}
+  .nav-right{display:flex;align-items:center;gap:10px;}
+  .nav-right .nav-cta{padding:10px 14px;}
+  .burger{width:42px;height:40px;border:1px solid var(--line);background:var(--card);border-radius:3px;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;padding:0;}
+  .burger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:1px;transition:transform .2s ease,opacity .2s ease;}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 14px 24px rgba(33,29,23,0.12);padding:6px 20px 14px;z-index:60;}
+  .nav-links.open{display:flex;}
+  .nav-links a{font-family:'Fraunces',serif;font-weight:600;font-size:20px;color:var(--ink);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--line);}
+  .nav-links a:last-child{border-bottom:0;}
+  .nav-links a.nav-wa{font-family:'Space Mono',monospace;font-weight:400;font-size:13px;color:var(--rust-dark);}
+  @media(min-width:860px){
+    .burger{display:none;}
+    .nav-links,.nav-links.open{display:flex;position:static;flex-direction:row;align-items:center;gap:28px;background:none;border:0;box-shadow:none;padding:0;}
+    .nav-links a{font-family:'Inter',sans-serif;font-weight:400;font-size:14px;padding:0;border:0;}
+    .nav-links a.nav-wa{display:none;}
   }
 </style>
 </head>
@@ -287,15 +346,19 @@
 
 <nav>
   <div class="navrow">
-    <a href="https://presentame.online/" class="logo">preséntame<span>.</span></a>
-    <div class="nav-links">
+    <a href="/" class="logo">preséntame<span>.</span></a>
+    <div class="nav-links" id="nav-menu">
       <a href="/#work">Trabajos</a>
       <a href="/#text-us">Cambios por mensaje</a>
       <a href="/#plans">Precios</a>
-      <a href="/branding">Marca</a>
-      <a href="/get-started">Empezar</a>
+      <a href="/branding/">Marca</a>
+      <a href="/solutions/">A la medida</a>
+      <a href="https://wa.me/529811086380" class="nav-wa" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','Lead');}">Escríbenos por WhatsApp</a>
     </div>
-    <a href="/get-started" class="nav-cta">Crear mi sitio</a>
+    <div class="nav-right">
+      <a href="/get-started" class="nav-cta">Crear mi sitio</a>
+      <button class="burger" type="button" aria-label="Menú" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </nav>
 
@@ -303,57 +366,106 @@
   <div class="wrap">
     <div class="eyebrow">Más allá del sitio web</div>
     <h1>Haz que tu marca <em>combine con tu sitio.</em></h1>
-    <p>Precios fijos, sin cotización. Compra un logotipo, un kit para redes o un menú aquí abajo y arrancamos de inmediato. Los paquetes con sitio web, más abajo, requieren una plática rápida antes.</p>
+    <p>Un logotipo, un kit para redes, un menú: complementos sencillos con precio fijo, o combínalos con tu sitio web.</p>
   </div>
 </header>
 
 <section id="standalone">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Compra ya, sin conversación</div>
+      <div class="eyebrow">Complementos</div>
       <h2>Marca por separado</h2>
-      <p>Precio fijo, entrega rápida. Paga y te contactamos para pedirte los detalles.</p>
+      <p>Precio fijo, entrega rápida.</p>
     </div>
 
-    <div class="product-grid">
+    <div class="brand-features">
 
-      <div class="product-card">
-        <h3>Identidad Inicial</h3>
-        <div class="price">$500 MXN</div>
-        <p class="contents">Logotipo, paleta de colores, tipografía y favicon, más el diseño de tu tarjeta de presentación. Todo lo que necesitas para verte con marca propia, entregado rápido.</p>
-        <div class="cta-row">
-          <a href="https://buy.stripe.com/6oU5kCcC682PcZS7Qu9EI0u" class="buy-btn" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Comprar por $500</a>
+      <figure class="bf bf--full">
+        <div class="bf-media">
+          <img src="/assets/images/brand-full-640.jpg" srcset="/assets/images/brand-full-640.jpg 640w, /assets/images/brand-full.jpg 1200w" sizes="(min-width:1220px) 1140px, calc(100vw - 40px)" width="1200" height="833" alt="Identidad de marca completa: tarjeta con logotipo, paleta de colores, tipografía, tarjetas de presentación, un perfil de WhatsApp Business en un celular, una firma de correo, portadas para redes, un volante y un código QR." loading="eager" decoding="async">
+          <div class="bf-card">
+            <div class="bf-main">
+              <div class="bf-tag">Mejor precio · Inicial + Social</div>
+              <h3>Identidad Completa</h3>
+              <div class="bf-price">$750 <span class="bf-save">MXN · $250 menos que comprar las dos por separado</span></div>
+              <ul class="bf-chips">
+                <li>Logotipo</li><li>Paleta</li><li>Tipografía</li><li>Favicon</li><li>Tarjeta de presentación</li><li>Recursos de WhatsApp</li><li>Firma de correo</li><li>Portadas para redes</li><li>Volante</li><li>Código QR</li>
+              </ul>
+            </div>
+            <div class="bf-cta">
+              <a href="https://buy.stripe.com/aFafZg9pU5UH8JC8Uy9EI0w" class="buy-btn" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Quiero la Identidad Completa</a>
+            </div>
+          </div>
         </div>
-      </div>
+        <figcaption>Identidad de ejemplo, mostrada para preséntame.</figcaption>
+      </figure>
 
-      <div class="product-card">
-        <h3>Identidad Social</h3>
-        <div class="price">$500 MXN</div>
-        <p class="contents">Recursos para WhatsApp Business, firma de correo, imágenes y portadas para redes, un volante y un código QR con tu marca. Toda tu presencia en línea, resuelta.</p>
-        <div class="cta-row">
-          <a href="https://buy.stripe.com/6oU9AS31w0An6Bu4Ei9EI0v" class="buy-btn" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Comprar por $500</a>
+      <figure class="bf bf--starter">
+        <div class="bf-media">
+          <img src="/assets/images/brand-starter-640.jpg" srcset="/assets/images/brand-starter-640.jpg 640w, /assets/images/brand-starter.jpg 1200w" sizes="(min-width:1220px) 1140px, calc(100vw - 40px)" width="1200" height="833" alt="Identidad inicial: una tarjeta con logotipo, paleta de colores de la marca, muestra de tipografía, favicon, pestaña del navegador y una tarjeta de presentación por ambos lados." loading="lazy" decoding="async">
+          <div class="bf-card">
+            <h3>Identidad Inicial</h3>
+            <div class="bf-price">$500 <span class="bf-save">MXN</span></div>
+            <p class="bf-lead">Todo lo que necesitas para verte con marca propia, entregado rápido.</p>
+            <ul class="bf-list">
+              <li>Logotipo</li>
+              <li>Paleta de colores</li>
+              <li>Combinación de tipografías</li>
+              <li>Favicon</li>
+              <li>Tarjeta de presentación a juego</li>
+            </ul>
+            <div class="cta-row">
+              <a href="https://buy.stripe.com/6oU5kCcC682PcZS7Qu9EI0u" class="buy-btn" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Quiero la Identidad Inicial</a>
+            </div>
+          </div>
         </div>
-      </div>
+        <figcaption>Identidad de ejemplo, mostrada para preséntame.</figcaption>
+      </figure>
 
-      <div class="product-card">
-        <h3>Identidad Completa</h3>
-        <div class="price">$750 MXN</div>
-        <p class="contents">Identidad Inicial e Identidad Social juntas: logotipo, tarjeta de presentación, recursos de WhatsApp, firma de correo, portadas para redes, volante y código QR. La marca completa, un solo precio.</p>
-        <div class="cta-row">
-          <a href="https://buy.stripe.com/aFafZg9pU5UH8JC8Uy9EI0w" class="buy-btn" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Comprar por $750</a>
+      <figure class="bf bf--social">
+        <div class="bf-media">
+          <img src="/assets/images/brand-social-640.jpg" srcset="/assets/images/brand-social-640.jpg 640w, /assets/images/brand-social.jpg 1200w" sizes="(min-width:1220px) 1140px, calc(100vw - 40px)" width="1200" height="833" alt="Identidad social: un perfil de WhatsApp Business en un celular, una firma de correo, una portada de Facebook, una publicación de Instagram, un volante y un código QR con la marca." loading="lazy" decoding="async">
+          <div class="bf-card">
+            <h3>Identidad Social</h3>
+            <div class="bf-price">$500 <span class="bf-save">MXN</span></div>
+            <p class="bf-lead">Toda tu presencia en línea, resuelta.</p>
+            <ul class="bf-list">
+              <li>Recursos para WhatsApp Business</li>
+              <li>Firma de correo</li>
+              <li>Imágenes y portadas para redes</li>
+              <li>Volante</li>
+              <li>Código QR con tu marca</li>
+            </ul>
+            <div class="cta-row">
+              <a href="https://buy.stripe.com/6oU9AS31w0An6Bu4Ei9EI0v" class="buy-btn" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Quiero la Identidad Social</a>
+            </div>
+          </div>
         </div>
-      </div>
+        <figcaption>Identidad de ejemplo, mostrada para preséntame.</figcaption>
+      </figure>
 
-      <div class="product-card">
-        <h3>Diseño de Menú</h3>
-        <div class="price">$350 MXN</div>
-        <p class="contents">Un menú limpio y listo para imprimir para tu negocio. Cualquier tamaño, un solo precio.</p>
-        <div class="cta-row">
-          <a href="https://buy.stripe.com/aFaeVcfOi2Iv2leeeS9EI0x" class="buy-btn" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Comprar por $350</a>
+      <figure class="bf bf--menu">
+        <div class="bf-media bf-split">
+          <img src="/assets/images/brand-menu-560.jpg" srcset="/assets/images/brand-menu-560.jpg 560w, /assets/images/brand-menu.jpg 960w" sizes="(min-width:1040px) 460px, min(420px, calc(100vw - 40px))" width="960" height="1280" alt="Diseño de menú listo para imprimir de una cafetería ficticia, Café La Esquina: un menú de dos columnas con una tarjeta de mesa a juego, un lápiz y una taza de café." loading="lazy" decoding="async">
+          <div class="bf-card">
+            <h3>Diseño de Menú</h3>
+            <div class="bf-price">$350 <span class="bf-save">MXN</span></div>
+            <p class="bf-lead">Un menú limpio y listo para imprimir para tu negocio. Cualquier tamaño, un solo precio.</p>
+            <ul class="bf-list">
+              <li>Secciones claras, fáciles de leer de un vistazo</li>
+              <li>Armado alrededor de tus platillos y precios</li>
+              <li>Archivo listo para imprimir</li>
+            </ul>
+            <div class="cta-row">
+              <a href="https://buy.stripe.com/aFaeVcfOi2Iv2leeeS9EI0x" class="buy-btn" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Quiero el Diseño de Menú</a>
+            </div>
+          </div>
         </div>
-      </div>
+        <figcaption>Menú de ejemplo para una cafetería ficticia, diseñado por preséntame.</figcaption>
+      </figure>
 
     </div>
+
   </div>
 </section>
 
@@ -362,7 +474,7 @@
     <div class="section-head">
       <div class="eyebrow">¿Vas a crear un sitio nuevo? Agrega tu marca al mismo tiempo.</div>
       <h2>Paquetes con sitio</h2>
-      <p>Combinan la construcción de tu sitio con un paquete de marca. Cada sitio necesita definirse primero, así que escríbenos y lo vemos.</p>
+      <p>Combinan la construcción de tu sitio con un paquete de marca. Escríbenos y lo armamos alrededor de tu negocio.</p>
     </div>
 
     <div class="bundle-grid">
@@ -373,7 +485,7 @@
         <div class="price">$750 + $150/mes de hosting</div>
         <p class="contents">Un sitio web sencillo con hosting, más tu Identidad Inicial: logotipo, tarjeta de presentación, paleta, tipografía y favicon.</p>
         <div class="cta-row">
-          <a href="https://wa.me/529811086380?text=Hola%2C%20me%20interesa%20el%20paquete%20Sitio%20%2B%20Identidad%20Inicial%20%28%24750%20MXN%2C%20m%C3%A1s%20%24150%20MXN/mes%20de%20hosting%29%20%E2%80%94%20%C2%BFme%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="ask-btn" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','Lead');}">Pregúntanos →</a>
+          <a href="https://wa.me/529811086380?text=Hola%2C%20me%20interesa%20el%20paquete%20Sitio%20%2B%20Identidad%20Inicial%20%28%24750%20MXN%2C%20m%C3%A1s%20%24150%20MXN%2Fmes%20de%20hosting%29.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="ask-btn" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','Lead');}">Pregúntanos →</a>
         </div>
       </div>
 
@@ -383,7 +495,7 @@
         <div class="price">$750 + $150/mes de hosting</div>
         <p class="contents">Un sitio web sencillo con hosting, más tu Identidad Social: recursos de WhatsApp, firma de correo, portadas para redes, volante y código QR.</p>
         <div class="cta-row">
-          <a href="https://wa.me/529811086380?text=Hola%2C%20me%20interesa%20el%20paquete%20Sitio%20%2B%20Identidad%20Social%20%28%24750%20MXN%2C%20m%C3%A1s%20%24150%20MXN/mes%20de%20hosting%29%20%E2%80%94%20%C2%BFme%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="ask-btn" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','Lead');}">Pregúntanos →</a>
+          <a href="https://wa.me/529811086380?text=Hola%2C%20me%20interesa%20el%20paquete%20Sitio%20%2B%20Identidad%20Social%20%28%24750%20MXN%2C%20m%C3%A1s%20%24150%20MXN%2Fmes%20de%20hosting%29.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="ask-btn" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','Lead');}">Pregúntanos →</a>
         </div>
       </div>
 
@@ -393,7 +505,7 @@
         <div class="price">$990 + $150/mes de hosting</div>
         <p class="contents">Un sitio web sencillo con hosting, más tu Identidad Completa: el logotipo, lo impreso y las redes. Tus primeros 3 meses de Fresh van incluidos, así que los cambios por mensaje son ilimitados mientras todo es nuevo.</p>
         <div class="cta-row">
-          <a href="https://wa.me/529811086380?text=Hola%2C%20me%20interesa%20Como%20Se%20Debe%20%28sitio%20%2B%20identidad%20completa%2C%20%24990%20MXN%20m%C3%A1s%20%24150%20MXN/mes%20de%20hosting%29%20%E2%80%94%20%C2%BFme%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="ask-btn" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','Lead');}">Pregúntanos →</a>
+          <a href="https://wa.me/529811086380?text=Hola%2C%20me%20interesa%20Como%20Se%20Debe%20%28sitio%20%2B%20identidad%20completa%2C%20%24990%20MXN%20m%C3%A1s%20%24150%20MXN%2Fmes%20de%20hosting%29.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="ask-btn" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','Lead');}">Pregúntanos →</a>
         </div>
       </div>
 
@@ -420,15 +532,28 @@
 
 <footer>
   <div class="wrap">
-    <a href="https://presentame.online/" class="logo">preséntame<span>.</span></a>
+    <a href="/" class="logo">preséntame<span>.</span></a>
     <p class="footer-tag">Sitios web para los negocios que mueven Latinoamérica, uno a la vez.</p>
     <div class="footer-links">
       <a href="/privacy-policy">Aviso de privacidad</a>
+      <a href="/terms">Términos del servicio</a>
       <a href="mailto:hola@presentame.online">hola@presentame.online</a>
     </div>
     <div class="footer-bottom mono">© 2026 preséntame. Todos los derechos reservados.</div>
   </div>
 </footer>
 
+<script>
+(function(){
+  var b=document.querySelector('.burger'),m=document.getElementById('nav-menu');
+  if(!b||!m)return;
+  function set(o){m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);}
+  b.addEventListener('click',function(e){e.stopPropagation();set(!m.classList.contains('open'));});
+  m.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+  document.addEventListener('click',function(e){if(!e.target.closest('nav'))set(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+  window.addEventListener('resize',function(){if(window.innerWidth>=860)set(false);});
+})();
+</script>
 </body>
 </html>

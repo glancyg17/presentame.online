@@ -88,7 +88,6 @@
     border-radius:3px;
     white-space:nowrap;
   }
-  .nav-links{display:none;}
 
   /* ---------- HERO ---------- */
   .hero{padding:28px 0 8px;}
@@ -258,6 +257,7 @@
     transition:box-shadow .18s ease, transform .18s ease;
   }
   .postcard:hover{box-shadow:0 12px 30px rgba(33,29,23,0.18);}
+  .dot{transition:background .2s ease;}
   .postcard:active{transform:scale(0.98);}
   .postcard:nth-child(odd){transform:rotate(-1.6deg);}
   .postcard:nth-child(even){transform:rotate(1.3deg);}
@@ -299,6 +299,23 @@
   }
   .section-head{margin-bottom:22px;}
   .section-head h2{font-size:25px;margin-top:8px;}
+
+
+  /* ---------- BRANDING TEASER (image + overlay) ---------- */
+  .bt-media{position:relative;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+  .bt-media img{width:100%;height:auto;aspect-ratio:1200/833;object-fit:cover;}
+  .bt-card{padding:22px 20px 24px;border-top:1px solid var(--line);background:var(--card);}
+  .bt-card .section-head{margin-bottom:12px;}
+  .bt-card .prose{font-size:14.5px;line-height:1.6;}
+  .bt-caption{font-family:'Space Mono',monospace;font-size:10.5px;color:var(--ink-soft);margin-top:8px;letter-spacing:0.02em;}
+  @media(min-width:1040px){
+    .bt-card{position:absolute;left:3.5%;bottom:3.5%;width:62%;border:1px solid var(--line);border-radius:8px;box-shadow:0 14px 34px rgba(33,29,23,0.16);display:grid;grid-template-columns:1fr 1.15fr;grid-template-areas:"head prose" "btn prose";column-gap:26px;row-gap:14px;align-items:center;padding:18px 24px;}
+    .bt-card .section-head{grid-area:head;margin-bottom:0;align-self:end;}
+    .bt-card .section-head h2{font-size:24px;}
+    .bt-copy{display:contents;}
+    .bt-prose{grid-area:prose;font-size:14px;line-height:1.55;}
+    .bt-btn{grid-area:btn;margin-top:0 !important;align-self:start;}
+  }
 
   /* ---------- POSTCARD TAG (system built on top of the site) ---------- */
   .postcard-tag{
@@ -402,6 +419,7 @@
   .talk-strip p{font-size:12.5px;color:#C9C2B0;}
   .talk-strip a.btn-primary{margin-left:auto;flex-shrink:0;font-size:12px;padding:10px 14px;}
 
+
   /* ---------- TEXT US (message-edit demo) ---------- */
   #text-us{padding-top:24px;}
   .text-us-grid{display:grid;gap:28px;align-items:center;}
@@ -466,15 +484,6 @@
 
   /* ---------- PLANS ---------- */
   #plans .section-head p{font-size:15px;color:var(--ink-soft);max-width:48ch;margin-top:10px;line-height:1.55;}
-  .build-line{
-    border:1px solid var(--line);border-left:4px solid var(--rust);
-    background:var(--card);border-radius:4px;
-    padding:16px 18px;margin-bottom:18px;
-    display:flex;flex-direction:column;gap:6px;
-  }
-  .build-line .big{font-family:'Fraunces',serif;font-weight:600;font-size:22px;}
-  .build-line .big .mono{font-size:13px;font-weight:400;color:var(--ink-soft);}
-  .build-line p{font-size:14px;color:var(--ink-soft);line-height:1.55;}
   .plan-grid{display:grid;gap:16px;}
   .plan{
     border:1px solid var(--line);border-radius:4px;background:var(--card);
@@ -494,7 +503,6 @@
   .fine{font-size:12.5px;color:var(--ink-soft);line-height:1.55;margin-top:16px;max-width:62ch;}
   .fine a{text-decoration:underline;text-underline-offset:3px;}
 
-
   /* ---------- FOOTER ---------- */
   footer{
     background:var(--ink);
@@ -510,7 +518,6 @@
 
   /* ---------- DESKTOP ---------- */
   @media(min-width:860px){
-    .nav-links{display:flex;gap:28px;font-size:14px;}
     .hero{padding:56px 0 12px;}
     .hero h1{font-size:48px;}
     .hero p{font-size:17.5px;}
@@ -565,9 +572,7 @@
     .text-us-grid{grid-template-columns:1.05fr .95fr;gap:56px;}
     .text-us-copy h2{font-size:36px;}
     .plan-grid{grid-template-columns:1fr 1fr;gap:20px;}
-    .build-line{flex-direction:row;align-items:baseline;justify-content:space-between;gap:24px;}
-    .build-line p{max-width:44ch;}
-
+  
     .checklist-card{padding:34px 38px;}
     .check-item{padding:18px 0;}
   }
@@ -581,7 +586,40 @@
     .chat .msg{opacity:1;transform:none;transition:none;}
 
   }
+
+  /* ---------- NAV: burger menu (mobile) ---------- */
+  .navrow{position:relative;}
+  .nav-right{display:flex;align-items:center;gap:10px;}
+  .nav-right .nav-cta{padding:10px 14px;}
+  .burger{width:42px;height:40px;border:1px solid var(--line);background:var(--card);border-radius:3px;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;padding:0;}
+  .burger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:1px;transition:transform .2s ease,opacity .2s ease;}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 14px 24px rgba(33,29,23,0.12);padding:6px 20px 14px;z-index:60;}
+  .nav-links.open{display:flex;}
+  .nav-links a{font-family:'Fraunces',serif;font-weight:600;font-size:20px;color:var(--ink);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--line);}
+  .nav-links a:last-child{border-bottom:0;}
+  .nav-links a.nav-wa{font-family:'Space Mono',monospace;font-weight:400;font-size:13px;color:var(--rust-dark);}
+  @media(min-width:860px){
+    .burger{display:none;}
+    .nav-links,.nav-links.open{display:flex;position:static;flex-direction:row;align-items:center;gap:28px;background:none;border:0;box-shadow:none;padding:0;}
+    .nav-links a{font-family:'Inter',sans-serif;font-weight:400;font-size:14px;padding:0;border:0;}
+    .nav-links a.nav-wa{display:none;}
+  }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "preséntame.",
+  "url": "https://presentame.online/",
+  "logo": "https://presentame.online/assets/images/logo.png",
+  "image": "https://presentame.online/assets/images/og-image.jpg",
+  "email": "hola@presentame.online",
+  "areaServed": ["MX", "LATAM"]
+}
+</script>
 </head>
 <body>
 <!-- Cookie Consent (Meta Pixel) -->
@@ -631,15 +669,19 @@
 
 <nav>
   <div class="navrow">
-    <a href="https://presentame.online/" class="logo">preséntame<span>.</span></a>
-    <div class="nav-links">
-      <a href="#work">Trabajos</a>
-      <a href="#text-us">Cambios por mensaje</a>
-      <a href="#plans">Precios</a>
-      <a href="/branding">Marca</a>
-      <a href="/get-started">Empezar</a>
+    <a href="/" class="logo">preséntame<span>.</span></a>
+    <div class="nav-links" id="nav-menu">
+      <a href="/#work">Trabajos</a>
+      <a href="/#text-us">Cambios por mensaje</a>
+      <a href="/#plans">Precios</a>
+      <a href="/branding/">Marca</a>
+      <a href="/solutions/">A la medida</a>
+      <a href="https://wa.me/529811086380" class="nav-wa" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','Lead');}">Escríbenos por WhatsApp</a>
     </div>
-    <a href="/get-started" class="nav-cta">Crear mi sitio</a>
+    <div class="nav-right">
+      <a href="/get-started" class="nav-cta">Crear mi sitio</a>
+      <button class="burger" type="button" aria-label="Menú" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </nav>
 
@@ -695,50 +737,87 @@
 
   <div class="deck-wrap">
     <div class="deck" id="deck">
-    <a href="https://kennedyexecutivetravel.com" target="_blank" rel="noopener" class="postcard">
+    <a href="https://orbitvision.co.uk" target="_blank" rel="noopener" class="postcard">
       <div class="pin"></div>
-      <img src="/assets/images/kennedy.jpg" alt="Sitio web de Kennedy Executive Travel" style="width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:1px;display:block;">
+      <img src="/assets/images/orbitvision.jpg" alt="Sitio web de Orbit Vision" loading="lazy" style="width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:1px;display:block;">
+      <div class="postcard-cap">
+        <span class="biz">Orbit Vision</span>
+        <span class="loc">TI y conectividad</span>
+      </div>
+      <div class="postcard-quote">"Hace justo lo que necesitábamos, y se ve a la altura."</div><!-- TEMP quote (traducción), reemplazar con reseña de Google -->
+    </a>
+    <a href="https://rfstrategic.co.uk" target="_blank" rel="noopener" class="postcard">
+      <div class="pin"></div>
+      <img src="/assets/images/rfstrategic.jpg" alt="Sitio web de RF Strategic" loading="lazy" style="width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:1px;display:block;">
+      <div class="postcard-cap">
+        <span class="biz">RF Strategic</span>
+        <span class="loc">Consultoría de negocios</span>
+      </div>
+      <div class="postcard-quote">"Claro, creíble y con el tono justo que queríamos."</div><!-- TEMP quote (traducción), reemplazar con reseña de Google -->
+    </a>
+    <a href="https://kennedyexecutivetravel.co.uk" target="_blank" rel="noopener" class="postcard">
+      <div class="pin"></div>
+      <img src="/assets/images/kennedy.jpg" alt="Sitio web de Kennedy Executive Travel" loading="lazy" style="width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:1px;display:block;">
       <div class="postcard-cap">
         <span class="biz">Kennedy Executive Travel</span>
         <span class="loc">Central Scotland</span>
       </div>
       <div class="postcard-tag">+ App de reservas y despacho</div>
-      <div class="postcard-quote">"Se ve como debe ser. Justo lo que necesita un servicio de lujo."</div>
+      <div class="postcard-quote">"Se ve como debe ser. Justo lo que necesita un servicio de lujo."</div><!-- TEMP quote, reemplazar con reseña de Google -->
     </a>
-
+    <a href="https://mayatuya.com" target="_blank" rel="noopener" class="postcard">
+      <div class="pin"></div>
+      <img src="/assets/images/mayatuya.jpg" alt="Sitio web de Maya Tuya" loading="lazy" style="width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:1px;display:block;">
+      <div class="postcard-cap">
+        <span class="biz">Maya Tuya</span>
+        <span class="loc">México</span>
+      </div>
+      <div class="postcard-quote">"Necesitábamos algo distinto. preséntame lo logró."</div><!-- TEMP quote, reemplazar con reseña de Google -->
+    </a>
+    <a href="https://steviemacsminibus.co.uk" target="_blank" rel="noopener" class="postcard">
+      <div class="pin"></div>
+      <img src="/assets/images/steviemacs.jpg" alt="Sitio web de Stevie Macs Mini Bus" loading="lazy" style="width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:1px;display:block;">
+      <div class="postcard-cap">
+        <span class="biz">Stevie Macs Mini Bus</span>
+        <span class="loc">Renta de minibuses</span>
+      </div>
+      <div class="postcard-quote">"Se ve bien en el celular, y el botón de cotizar cumple su función."</div><!-- TEMP quote (traducción), reemplazar con reseña de Google -->
+    </a>
     <a href="https://ekvanservices.co.uk" target="_blank" rel="noopener" class="postcard">
       <div class="pin"></div>
-      <img src="/assets/images/ekvanmobile.jpeg" alt="Sitio web de EK Van Services" style="width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:1px;display:block;">
+      <img src="/assets/images/ekvan.jpg" alt="Sitio web de EK Van Services" loading="lazy" style="width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:1px;display:block;">
       <div class="postcard-cap">
         <span class="biz">EK Van Services</span>
         <span class="loc">East Kilbride</span>
       </div>
-      <div class="postcard-quote">"Ahora los clientes nos encuentran en Google. Antes eso nunca pasaba."</div>
+      <div class="postcard-quote">"Ahora los clientes nos encuentran en Google. Antes eso nunca pasaba."</div><!-- TEMP quote, reemplazar con reseña de Google -->
     </a>
-
+    <a href="https://ldconstruction.trade" target="_blank" rel="noopener" class="postcard">
+      <div class="pin"></div>
+      <img src="/assets/images/ldconstruction.jpg" alt="Sitio web de L.D Construction" loading="lazy" style="width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:1px;display:block;">
+      <div class="postcard-cap">
+        <span class="biz">L.D Construction</span>
+        <span class="loc">Bellshill</span>
+      </div>
+      <div class="postcard-quote">"¡Muy recomendados! Muy buenos y rápidos en lo que hacen, getPresented ha ayudado mucho a mi negocio de muchas maneras. Su trabajo es inmejorable."</div><!-- Reseña real de Google (Lewis, L.D Construction), traducida al español. Se conserva "getPresented" tal como lo escribió el cliente. -->
+    </a>
     <a href="https://casamayis.com" target="_blank" rel="noopener" class="postcard">
       <div class="pin"></div>
-      <img src="/assets/images/casamayis.jpeg" alt="Sitio web de Casa Mayis" style="width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:1px;display:block;">
+      <img src="/assets/images/casamayis.jpg" alt="Sitio web de Casa Mayis" loading="lazy" style="width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:1px;display:block;">
       <div class="postcard-cap">
         <span class="biz">Casa Mayis</span>
         <span class="loc">Campeche, MX</span>
       </div>
-      <div class="postcard-quote">"Mis clientes comentan sobre mi sitio todo el tiempo. ¡No podría estar más feliz!"</div>
-    </a>
-
-    <a href="https://mayatuya.com" target="_blank" rel="noopener" class="postcard">
-      <div class="pin"></div>
-      <img src="/assets/images/mayatuya.jpeg" alt="Sitio web de Maya Tuya" style="width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:1px;display:block;">
-      <div class="postcard-cap">
-        <span class="biz">Maya Tuya</span>
-        <span class="loc">Mexico</span>
-      </div>
-      <div class="postcard-quote">"Necesitábamos algo distinto. preséntame lo logró."</div>
+      <div class="postcard-quote">"Mis clientes comentan sobre mi sitio todo el tiempo. ¡No podría estar más feliz!"</div><!-- TEMP quote, reemplazar con reseña de Google -->
     </a>
   </div><!-- /deck -->
   </div><!-- /deck-wrap -->
-  <div class="deck-dots">
+  <div class="deck-dots" id="deck-dots" aria-hidden="true">
     <div class="dot active"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
     <div class="dot"></div>
     <div class="dot"></div>
     <div class="dot"></div>
@@ -803,13 +882,8 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Precios</div>
-      <h2>$500 para construirlo. Luego eliges cuánto cuidado quieres.</h2>
-      <p>Un precio por construirlo y una mensualidad pequeña después. Sin contrato y sin cuotas de arranque.</p>
-    </div>
-
-    <div class="build-line">
-      <div class="big">Desde $500 MXN <span class="mono">pago único, para construir tu sitio</span></div>
-      <p>Tu primer pago cubre la construcción más tu primer mes, así que son $650 para empezar. Después, solo $150 al mes.</p>
+      <h2>Elige cuánto quieres que cuidemos tu sitio.</h2>
+      <p>Un pago único por construirlo y una mensualidad pequeña después. Sin contrato y sin cuotas de arranque.</p>
     </div>
 
     <div class="plan-grid">
@@ -828,19 +902,21 @@
 
       <div class="plan fresh">
         <h3>Fresh</h3>
-        <p class="tagline">Para negocios donde los precios, menús u horarios cambian seguido.</p>
+        <p class="tagline">Lo vigilamos por ti: cambios, resultados y un aviso cuando algo necesite actualizarse.</p>
         <div class="price">$300<span> MXN / mes</span></div>
         <ul>
           <li>Todo lo de Live</li>
           <li class="plus">Cambios cotidianos ilimitados, por mensaje</li>
-          <li>Una renovación anual de tu volante, tarjeta o menú</li>
+          <li class="plus">Un mensaje al mes de "cómo le fue a tu sitio": visitas y búsquedas en Google, en palabras sencillas</li>
+          <li>Un aviso antes de las temporadas fuertes, para que tus horarios y ofertas estén al día</li>
+          <li>Una revisión anual, más una renovación de tu volante, tarjeta o menú</li>
           <li>Cancela cuando quieras</li>
         </ul>
         <div class="plan-cta"><a href="https://buy.stripe.com/8x26oG7hMfvhgc49YC9EI0r" class="btn-secondary" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Crear mi sitio con Fresh</a></div>
       </div>
     </div>
 
-    <p class="fine">Un "cambio" es una solicitud, como nuevos horarios, una foto distinta o una lista de precios actualizada. "Ilimitados" en Fresh significa cambios cotidianos a tus páginas existentes; las páginas nuevas o un rediseño se cotizan aparte. Tu sitio es tuyo: si algún día te vas, te entregamos tu dominio por un pago único de $170 MXN.</p>
+    <p class="fine">Construcción desde $500 MXN; los sitios complejos o de varias páginas pueden cotizarse aparte. Un "cambio" es una solicitud, como nuevos horarios, una foto distinta o una lista de precios actualizada. "Ilimitados" en Fresh significa cambios cotidianos a tus páginas existentes; las páginas nuevas o un rediseño se cotizan aparte. Tu sitio es tuyo: si algún día te vas, te entregamos tu dominio por un pago único de $170 MXN.</p>
   </div>
 </section>
 
@@ -886,14 +962,22 @@
 
 <section id="branding-teaser">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Marca e impresos</div>
-      <h2>¿Quieres que tu marca combine con el sitio?</h2>
+    <div class="bt-media">
+      <img src="/assets/images/brand-full-640.jpg" srcset="/assets/images/brand-full-640.jpg 640w, /assets/images/brand-full.jpg 1200w" sizes="(min-width:1220px) 1140px, calc(100vw - 40px)" width="1200" height="833" alt="Identidad de marca completa: tarjeta con logotipo, paleta de colores, tipografía, tarjetas de presentación, un perfil de WhatsApp Business en un celular, una firma de correo, portadas para redes, un volante y un código QR." loading="lazy" decoding="async">
+      <div class="bt-card">
+        <div class="section-head">
+          <div class="eyebrow">Marca e impresos</div>
+          <h2>¿Quieres que tu marca combine con el sitio?</h2>
+        </div>
+        <div class="bt-copy">
+          <p class="prose bt-prose">Logotipos, tarjetas de presentación, kits para redes y menús: todo lo que hace que tu negocio se vea tan bien en WhatsApp y en papel como en línea. O hazlo todo junto con tu sitio, con Como Se Debe.</p>
+          <div class="bt-btn" style="margin-top:14px;">
+            <a href="/branding" class="btn-secondary" style="display:inline-block;">Ver marca e impresos →</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <p class="prose">Logotipos, tarjetas de presentación, kits para redes y menús, todos como complementos con precio fijo y sin cotización. Compra en línea y empezamos. O llévate todo con tu sitio: Como Se Debe es un sitio web más tu identidad completa por $990, luego $150 al mes, e incluye tus primeros 3 meses de Fresh.</p>
-    <div style="margin-top:18px;">
-      <a href="/branding" class="btn-secondary" style="display:inline-block;">Ver marca e impresos →</a>
-    </div>
+    <p class="bt-caption">Identidad de ejemplo, mostrada para preséntame.</p>
   </div>
 </section>
 
@@ -934,10 +1018,11 @@
 
 <footer>
   <div class="wrap">
-    <a href="https://presentame.online/" class="logo">preséntame<span>.</span></a>
+    <a href="/" class="logo">preséntame<span>.</span></a>
     <p class="footer-tag">Sitios web para los negocios que mueven Latinoamérica, uno a la vez.</p>
     <div class="footer-links">
       <a href="/privacy-policy">Aviso de privacidad</a>
+      <a href="/terms">Términos del servicio</a>
       <a href="mailto:hola@presentame.online">hola@presentame.online</a>
     </div>
     <div class="footer-bottom mono">© 2026 preséntame. Todos los derechos reservados.</div>
@@ -1064,5 +1149,80 @@
 
 </script>
 
+<script>
+// Gallery: random order on every page load, gentle auto-cycle, live dots.
+// Auto-cycle pauses on touch/hover/focus/manual scroll and when off-screen;
+// it never runs for visitors who prefer reduced motion.
+(function(){
+  var deck=document.getElementById('deck'),dotsBox=document.getElementById('deck-dots');
+  if(!deck)return;
+  var cards=Array.prototype.slice.call(deck.children).filter(function(c){return c.classList.contains('postcard');});
+  if(cards.length<2)return;
+
+  // Fisher-Yates shuffle, re-append in new order
+  for(var i=cards.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=cards[i];cards[i]=cards[j];cards[j]=t;}
+  cards.forEach(function(c){deck.appendChild(c);});
+  deck.scrollLeft=0;
+
+  // Dots match the number of cards
+  var dots=[];
+  if(dotsBox){
+    dotsBox.innerHTML='';
+    cards.forEach(function(){var d=document.createElement('div');d.className='dot';dotsBox.appendChild(d);dots.push(d);});
+  }
+
+  function targetLeft(card){
+    var dr=deck.getBoundingClientRect(),cr=card.getBoundingClientRect();
+    var center=getComputedStyle(card).scrollSnapAlign.indexOf('center')>-1;
+    var offset=center?(deck.clientWidth-cr.width)/2:parseFloat(getComputedStyle(deck).paddingLeft)||0;
+    return deck.scrollLeft+(cr.left-dr.left)-offset;
+  }
+  function nearest(){
+    var best=0,bestDist=Infinity,sl=deck.scrollLeft;
+    cards.forEach(function(c,k){var d=Math.abs(targetLeft(c)-sl);if(d<bestDist){bestDist=d;best=k;}});
+    return best;
+  }
+  function paintDots(){var n=nearest();dots.forEach(function(d,k){d.classList.toggle('active',k===n);});}
+  var ticking=false;
+  deck.addEventListener('scroll',function(){if(ticking)return;ticking=true;requestAnimationFrame(function(){ticking=false;paintDots();});},{passive:true});
+  window.addEventListener('resize',paintDots);
+  paintDots();
+
+  // Auto-cycle
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer=null,paused=false,visible=false;
+  function next(){
+    if(paused||!visible)return;
+    var n=(nearest()+1)%cards.length;
+    deck.scrollTo({left:targetLeft(cards[n]),behavior:'smooth'});
+  }
+  function start(){if(!timer)timer=setInterval(next,4500);}
+  function stop(){clearInterval(timer);timer=null;}
+  function hold(ms){paused=true;clearTimeout(hold.t);hold.t=setTimeout(function(){paused=false;},ms);}
+  ['touchstart','pointerdown','wheel','keydown'].forEach(function(ev){deck.addEventListener(ev,function(){hold(9000);},{passive:true});});
+  deck.addEventListener('mouseenter',function(){paused=true;clearTimeout(hold.t);});
+  deck.addEventListener('mouseleave',function(){hold(1500);});
+  deck.addEventListener('focusin',function(){paused=true;clearTimeout(hold.t);});
+  deck.addEventListener('focusout',function(){hold(1500);});
+  document.addEventListener('visibilitychange',function(){document.hidden?stop():start();});
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(e){visible=e[0].isIntersecting;},{threshold:0.5}).observe(deck);
+  }else{visible=true;}
+  start();
+})();
+</script>
+
+<script>
+(function(){
+  var b=document.querySelector('.burger'),m=document.getElementById('nav-menu');
+  if(!b||!m)return;
+  function set(o){m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);}
+  b.addEventListener('click',function(e){e.stopPropagation();set(!m.classList.contains('open'));});
+  m.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+  document.addEventListener('click',function(e){if(!e.target.closest('nav'))set(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+  window.addEventListener('resize',function(){if(window.innerWidth>=860)set(false);});
+})();
+</script>
 </body>
 </html>

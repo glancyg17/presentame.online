@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://presentame.online/sitemap.xml

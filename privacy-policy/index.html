@@ -144,14 +144,57 @@
   @media(min-width:860px){
     .doc-header h1{font-size:34px;}
   }
+
+  .nav-cta{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    background:var(--ink);
+    color:var(--paper);
+    padding:10px 16px;
+    border-radius:3px;
+    white-space:nowrap;
+    text-decoration:none;
+  }
+
+  /* ---------- NAV: burger menu (mobile) ---------- */
+  .navrow{position:relative;}
+  .nav-right{display:flex;align-items:center;gap:10px;}
+  .nav-right .nav-cta{padding:10px 14px;}
+  .burger{width:42px;height:40px;border:1px solid var(--line);background:var(--card);border-radius:3px;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;padding:0;}
+  .burger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:1px;transition:transform .2s ease,opacity .2s ease;}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 14px 24px rgba(33,29,23,0.12);padding:6px 20px 14px;z-index:60;}
+  .nav-links.open{display:flex;}
+  .nav-links a{font-family:'Fraunces',serif;font-weight:600;font-size:20px;color:var(--ink);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--line);}
+  .nav-links a:last-child{border-bottom:0;}
+  .nav-links a.nav-wa{font-family:'Space Mono',monospace;font-weight:400;font-size:13px;color:var(--rust-dark);}
+  @media(min-width:860px){
+    .burger{display:none;}
+    .nav-links,.nav-links.open{display:flex;position:static;flex-direction:row;align-items:center;gap:28px;background:none;border:0;box-shadow:none;padding:0;}
+    .nav-links a{font-family:'Inter',sans-serif;font-weight:400;font-size:14px;padding:0;border:0;}
+    .nav-links a.nav-wa{display:none;}
+  }
 </style>
 </head>
 <body>
 
 <nav>
   <div class="navrow">
-    <a href="https://presentame.online/" class="logo">preséntame<span>.</span></a>
-    <a href="/" class="nav-back">← volver al inicio</a>
+    <a href="/" class="logo">preséntame<span>.</span></a>
+    <div class="nav-links" id="nav-menu">
+      <a href="/#work">Trabajos</a>
+      <a href="/#text-us">Cambios por mensaje</a>
+      <a href="/#plans">Precios</a>
+      <a href="/branding/">Marca</a>
+      <a href="/solutions/">A la medida</a>
+      <a href="https://wa.me/529811086380" class="nav-wa" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','Lead');}">Escríbenos por WhatsApp</a>
+    </div>
+    <div class="nav-right">
+      <a href="/get-started" class="nav-cta">Crear mi sitio</a>
+      <button class="burger" type="button" aria-label="Menú" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </nav>
 
@@ -160,7 +203,7 @@
   <div class="doc-header">
     <div class="eyebrow">Legal</div>
     <h1>Aviso de Privacidad</h1>
-    <div class="updated mono">Última actualización: julio de 2026</div>
+    <div class="updated mono">Última actualización: noviembre de 2026</div>
   </div>
 
   <section class="doc-section">
@@ -197,8 +240,8 @@
         </tr>
         <tr>
           <td>WhatsApp</td>
-          <td>Tu número de teléfono y el contenido del mensaje</td>
-          <td>Para responder tu pregunta o platicar sobre tu proyecto</td>
+          <td>Tu número de teléfono y el contenido del mensaje, incluidas las fotos o notas de voz que nos envíes</td>
+          <td>Para responder tu pregunta, platicar sobre tu proyecto o hacer los cambios que pidas en tu sitio</td>
         </tr>
         <tr>
           <td>Al hacer un pago</td>
@@ -235,7 +278,7 @@
 
   <section class="doc-section">
     <h2><span class="num">04</span>Cuánto tiempo conservamos tu información</h2>
-    <p>Si nos consultas pero no continúas con un sitio web, conservaremos tus datos hasta por 12 meses por si quieres retomarlo, y después los eliminamos. Si te vuelves cliente, conservamos la información necesaria para operar tu sitio y hosting mientras seas cliente, más un periodo razonable después para nuestros propios registros (típicamente hasta 5 años, conforme a la práctica contable habitual en México).</p>
+    <p>Si nos consultas pero no continúas con un sitio web, conservaremos tus datos hasta por 12 meses por si quieres retomarlo, y después los eliminamos. Si te vuelves cliente, conservamos la información necesaria para operar tu sitio y hosting mientras seas cliente, más un periodo razonable después para nuestros propios registros (típicamente hasta 5 años, conforme a la práctica contable habitual en México). Los mensajes, fotos y notas de voz que envíes para cambios en tu sitio se conservan solo el tiempo necesario para hacer el cambio y llevar un registro.</p>
   </section>
 
   <section class="doc-section">
@@ -271,9 +314,21 @@
 <footer>
   <div class="footer-bottom">
     <span>preséntame.</span>
-    <span>hola@presentame.online</span>
+    <span><a href="/terms/">Términos del servicio</a> · hola@presentame.online</span>
   </div>
 </footer>
 
+<script>
+(function(){
+  var b=document.querySelector('.burger'),m=document.getElementById('nav-menu');
+  if(!b||!m)return;
+  function set(o){m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);}
+  b.addEventListener('click',function(e){e.stopPropagation();set(!m.classList.contains('open'));});
+  m.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+  document.addEventListener('click',function(e){if(!e.target.closest('nav'))set(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+  window.addEventListener('resize',function(){if(window.innerWidth>=860)set(false);});
+})();
+</script>
 </body>
 </html>
