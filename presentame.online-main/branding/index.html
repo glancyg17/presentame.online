@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marca e impresos | preséntame.</title>
+<meta name="description" content="Logotipos, tarjetas de presentación, kits para redes y menús para pequeños negocios, desde $350 MXN.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://presentame.online/branding/">
+<link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://presentame.online/branding/">
+<meta property="og:title" content="Marca e impresos | preséntame.">
+<meta property="og:description" content="Logotipos, tarjetas de presentación, kits para redes y menús para pequeños negocios, desde $350 MXN.">
+<meta property="og:image" content="https://presentame.online/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="preséntame.">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Marca e impresos | preséntame.">
+<meta name="twitter:description" content="Logotipos, tarjetas de presentación, kits para redes y menús para pequeños negocios, desde $350 MXN.">
+<meta name="twitter:image" content="https://presentame.online/assets/images/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F3EC;
+    --ink:#211D17;
+    --rust:#B5542E;
+    --rust-dark:#9A4423;
+    --green:#3D7A5C;
+    --line:#D8CFBC;
+    --card:#FAFAF8;
+    --ink-soft:#5C5648;
+    --max:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}
+
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;letter-spacing:-0.01em;line-height:1.08;}
+  .mono{font-family:'Space Mono',monospace;}
+  .eyebrow{
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--rust);
+    display:flex;align-items:center;gap:8px;
+  }
+  .eyebrow::before{content:'';width:14px;height:1px;background:var(--rust);}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(247,243,236,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .navrow{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 20px;
+    max-width:var(--max);margin:0 auto;
+  }
+  .logo{font-family:'Fraunces',serif;font-weight:600;font-size:20px;text-decoration:none;color:var(--ink);}
+  .logo span{color:var(--rust);}
+  .nav-cta{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    background:var(--ink);
+    color:var(--paper);
+    padding:10px 16px;
+    border-radius:3px;
+    white-space:nowrap;
+  }
+
+  /* ---------- HERO ---------- */
+  .page-hero{padding:40px 0 8px;}
+  .page-hero .eyebrow{margin-bottom:14px;}
+  .page-hero h1{font-size:30px;max-width:16ch;margin-bottom:14px;}
+  .page-hero h1 em{font-style:normal;color:var(--rust);}
+  .page-hero p{font-size:15.5px;color:var(--ink-soft);line-height:1.6;max-width:52ch;}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:36px 0;}
+  .section-head{margin-bottom:22px;}
+  .section-head .eyebrow{margin-bottom:8px;}
+  .section-head h2{font-size:23px;}
+  .section-head p{font-size:14px;color:var(--ink-soft);max-width:46ch;margin-top:8px;line-height:1.55;}
+
+  /* ---------- PRODUCT GRID ---------- */
+  .product-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+  .product-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:22px 20px;
+    display:flex;flex-direction:column;
+  }
+  .product-card h3{font-size:18px;margin-bottom:4px;}
+  .product-card .price{
+    font-family:'Space Mono',monospace;
+    font-size:14px;
+    color:var(--rust);
+    margin-bottom:12px;
+  }
+  .product-card .contents{
+    font-size:13.5px;
+    color:var(--ink-soft);
+    line-height:1.55;
+    margin-bottom:20px;
+  }
+  .product-card .cta-row{margin-top:auto;}
+  .buy-btn{
+    display:block;
+    background:var(--rust);
+    color:var(--paper);
+    font-family:'Space Mono',monospace;
+    font-size:13px;
+    text-align:center;
+    padding:14px 18px;
+    border-radius:4px;
+    border:1px solid var(--rust-dark);
+    box-shadow:0 2px 0 var(--rust-dark);
+    transition:transform .15s ease;
+  }
+  .buy-btn:active{transform:translateY(2px);box-shadow:none;}
+
+
+  /* ---------- BRAND FEATURES (image + overlay card) ---------- */
+  .brand-features{display:flex;flex-direction:column;gap:34px;}
+  .bf{margin:0;}
+  .bf-media{position:relative;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+  .bf-media img{width:100%;height:auto;aspect-ratio:1200/833;object-fit:cover;}
+  .bf-card{padding:22px 20px 24px;border-top:1px solid var(--line);background:var(--card);}
+  .bf-tag{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--rust);margin-bottom:8px;}
+  .bf-card h3{font-size:22px;margin-bottom:4px;}
+  .bf-price{font-family:'Space Mono',monospace;font-size:14px;color:var(--rust);margin-bottom:12px;}
+  .bf-lead{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-bottom:14px;}
+  .bf-save{color:var(--ink-soft);font-size:11.5px;}
+  .bf-list{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:18px;}
+  .bf-list li{font-size:13.5px;color:var(--ink);line-height:1.4;padding-left:18px;position:relative;}
+  .bf-list li::before{content:'';position:absolute;left:0;top:0.5em;width:7px;height:7px;border-radius:50%;background:var(--green);}
+  .bf-chips{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;}
+  .bf-chips li{font-family:'Space Mono',monospace;font-size:10.5px;border:1px solid var(--line);background:var(--paper);border-radius:20px;padding:5px 10px;color:var(--ink-soft);}
+  .bf figcaption{font-family:'Space Mono',monospace;font-size:10.5px;color:var(--ink-soft);margin-top:8px;letter-spacing:0.02em;}
+  .bf-split img{max-width:420px;margin:0 auto;aspect-ratio:960/1280;}
+  .bf-split{background:var(--paper);}
+  @media(min-width:1040px){
+    .bf-card{position:absolute;border:1px solid var(--line);border-radius:8px;box-shadow:0 14px 34px rgba(33,29,23,0.16);padding:22px 22px 24px;}
+    .bf-card h3{font-size:24px;}
+    .bf--starter .bf-card{top:50%;right:3%;transform:translateY(-50%);width:31%;}
+    .bf--social .bf-card{top:50%;left:2.5%;transform:translateY(-50%);width:24.5%;padding:18px 16px 20px;}
+    .bf--social .bf-card h3{font-size:21px;}
+    .bf--social .bf-list li{font-size:12.5px;}
+    .bf--full .bf-card{left:3.5%;bottom:3.5%;width:57%;display:grid;grid-template-columns:1fr auto;column-gap:22px;align-items:end;padding:16px 22px 18px;}
+    .bf--full .bf-card .bf-main{min-width:0;}
+    .bf--full .bf-card h3{font-size:24px;margin-bottom:2px;}
+    .bf--full .bf-chips{margin-bottom:0;}
+    .bf--full .bf-card .bf-cta{width:210px;}
+    .bf--full .bf-price{margin-bottom:10px;}
+    .bf--full .bf-card .bf-tag{margin-bottom:6px;}
+    .bf-split{display:grid;grid-template-columns:minmax(0,460px) 1fr;align-items:center;gap:0;}
+    .bf-split img{max-width:none;margin:0;width:100%;aspect-ratio:960/1280;}
+    .bf-split .bf-card{position:static;transform:none;border:0;box-shadow:none;border-radius:0;background:transparent;width:auto;max-width:420px;margin:0 auto;padding:28px;}
+    .bf-split .bf-card h3{font-size:28px;}
+  }
+
+  /* ---------- BUNDLES ---------- */
+  .bundles{border-top:1px solid var(--line);}
+  .bundle-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+  .bundle-card{
+    background:var(--paper);
+    border:1px solid var(--ink);
+    border-radius:6px;
+    padding:22px 20px;
+    display:flex;flex-direction:column;
+  }
+  .bundle-card .tag{
+    font-family:'Space Mono',monospace;
+    font-size:9.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+  .bundle-card h3{font-size:18px;margin-bottom:4px;}
+  .bundle-card .price{
+    font-family:'Space Mono',monospace;
+    font-size:13px;
+    color:var(--ink-soft);
+    margin-bottom:12px;
+  }
+  .bundle-card .contents{
+    font-size:13.5px;
+    color:var(--ink-soft);
+    line-height:1.55;
+    margin-bottom:20px;
+  }
+  .bundle-card .cta-row{margin-top:auto;}
+  .ask-btn{
+    display:block;
+    background:transparent;
+    color:var(--ink);
+    font-family:'Space Mono',monospace;
+    font-size:13px;
+    text-align:center;
+    padding:13px 18px;
+    border-radius:4px;
+    border:1px solid var(--ink);
+  }
+
+  /* ---------- WHATSAPP STRIP ---------- */
+  .talk-strip{
+    background:var(--ink);
+    color:var(--paper);
+    border-radius:6px;
+    padding:22px 22px;
+    display:flex;align-items:center;gap:14px;
+  }
+  .talk-icon{
+    width:40px;height:40px;border-radius:50%;
+    background:#25D366;
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .talk-strip h3{font-size:15.5px;color:var(--paper);margin-bottom:2px;}
+  .talk-strip p{font-size:12.5px;color:#C9C2B0;}
+  .talk-strip a.talk-cta{
+    margin-left:auto;flex-shrink:0;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    background:var(--rust);
+    color:var(--paper);
+    padding:10px 14px;
+    border-radius:4px;
+    border:1px solid var(--rust-dark);
+    box-shadow:0 2px 0 var(--rust-dark);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--ink);
+    color:var(--paper);
+    padding:40px 0 28px;
+    margin-top:20px;
+  }
+  footer .logo{color:var(--paper);}
+  footer .logo span{color:var(--rust);}
+  .footer-tag{font-size:13px;color:#A89F8C;margin-top:8px;max-width:32ch;}
+  .footer-links{display:flex;flex-direction:column;gap:8px;margin-top:24px;font-size:13px;}
+  .footer-bottom{margin-top:28px;padding-top:18px;border-top:1px solid #3A352B;font-size:11px;color:#7A7363;font-family:'Space Mono',monospace;}
+
+  /* ---------- DESKTOP ---------- */
+  @media(min-width:860px){
+    .page-hero{padding:64px 0 12px;}
+    .page-hero h1{font-size:44px;}
+    .page-hero p{font-size:17px;}
+    section{padding:56px 0;}
+    .section-head h2{font-size:30px;}
+    .product-grid{grid-template-columns:repeat(2,1fr);gap:20px;}
+    .bundle-grid{grid-template-columns:repeat(3,1fr);gap:20px;}
+  }
+
+  /* ---------- NAV: burger menu (mobile) ---------- */
+  .navrow{position:relative;}
+  .nav-right{display:flex;align-items:center;gap:10px;}
+  .nav-right .nav-cta{padding:10px 14px;}
+  .burger{width:42px;height:40px;border:1px solid var(--line);background:var(--card);border-radius:3px;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;padding:0;}
+  .burger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:1px;transition:transform .2s ease,opacity .2s ease;}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 14px 24px rgba(33,29,23,0.12);padding:6px 20px 14px;z-index:60;}
+  .nav-links.open{display:flex;}
+  .nav-links a{font-family:'Fraunces',serif;font-weight:600;font-size:20px;color:var(--ink);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--line);}
+  .nav-links a:last-child{border-bottom:0;}
+  .nav-links a.nav-wa{font-family:'Space Mono',monospace;font-weight:400;font-size:13px;color:var(--rust-dark);}
+  @media(min-width:860px){
+    .burger{display:none;}
+    .nav-links,.nav-links.open{display:flex;position:static;flex-direction:row;align-items:center;gap:28px;background:none;border:0;box-shadow:none;padding:0;}
+    .nav-links a{font-family:'Inter',sans-serif;font-weight:400;font-size:14px;padding:0;border:0;}
+    .nav-links a.nav-wa{display:none;}
+  }
+</style>
+</head>
+<body>
+<!-- Cookie Consent (Meta Pixel) -->
+<div id="fp-consent" style="position:fixed;left:0;right:0;bottom:0;z-index:9999;display:none;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;background:#211D17;color:#F7F3EC;font-family:'Inter',sans-serif;font-size:12.5px;line-height:1.5;padding:12px 16px;box-shadow:0 -2px 10px rgba(0,0,0,.18);">
+  <span style="max-width:560px;">Usamos cookies de medición publicitaria (Meta Pixel) solo si las aceptas. <a href="/privacy-policy/" style="color:#B5542E;">Aviso de privacidad</a></span>
+  <span style="display:flex;gap:8px;">
+    <button id="fp-decline" style="background:transparent;border:1px solid #5C5648;color:#F7F3EC;padding:5px 12px;font-size:12px;border-radius:3px;cursor:pointer;font-family:inherit;">Rechazar</button>
+    <button id="fp-accept" style="background:#B5542E;border:1px solid #B5542E;color:#F7F3EC;padding:5px 12px;font-size:12px;border-radius:3px;cursor:pointer;font-family:inherit;">Aceptar</button>
+  </span>
+</div>
+<script>
+(function(){
+  function fpLoadPixel(){
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1597034095279542');
+    fbq('track', 'PageView');
+  }
+  var c = localStorage.getItem('fp_ad_consent');
+  var banner = document.getElementById('fp-consent');
+  if(c === 'granted'){
+    fpLoadPixel();
+  } else if(c !== 'denied' && banner){
+    banner.style.display = 'flex';
+  }
+  if(banner){
+    document.getElementById('fp-accept').addEventListener('click', function(){
+      localStorage.setItem('fp_ad_consent','granted');
+      banner.style.display = 'none';
+      fpLoadPixel();
+    });
+    document.getElementById('fp-decline').addEventListener('click', function(){
+      localStorage.setItem('fp_ad_consent','denied');
+      banner.style.display = 'none';
+    });
+  }
+})();
+</script>
+<!-- End Cookie Consent -->
+
+
+<nav>
+  <div class="navrow">
+    <a href="/" class="logo">preséntame<span>.</span></a>
+    <div class="nav-links" id="nav-menu">
+      <a href="/#work">Trabajos</a>
+      <a href="/#text-us">Cambios por mensaje</a>
+      <a href="/#plans">Precios</a>
+      <a href="/branding/">Marca</a>
+      <a href="/solutions/">A la medida</a>
+      <a href="https://wa.me/529811086380" class="nav-wa" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','Lead');}">Escríbenos por WhatsApp</a>
+    </div>
+    <div class="nav-right">
+      <a href="/get-started" class="nav-cta">Crear mi sitio</a>
+      <button class="burger" type="button" aria-label="Menú" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Más allá del sitio web</div>
+    <h1>Haz que tu marca <em>combine con tu sitio.</em></h1>
+    <p>Un logotipo, un kit para redes, un menú: complementos sencillos con precio fijo, o combínalos con tu sitio web.</p>
+  </div>
+</header>
+
+<section id="standalone">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Complementos</div>
+      <h2>Marca por separado</h2>
+      <p>Precio fijo, entrega rápida.</p>
+    </div>
+
+    <div class="brand-features">
+
+      <figure class="bf bf--full">
+        <div class="bf-media">
+          <img src="/assets/images/brand-full-640.jpg" srcset="/assets/images/brand-full-640.jpg 640w, /assets/images/brand-full.jpg 1200w" sizes="(min-width:1220px) 1140px, calc(100vw - 40px)" width="1200" height="833" alt="Identidad de marca completa: tarjeta con logotipo, paleta de colores, tipografía, tarjetas de presentación, un perfil de WhatsApp Business en un celular, una firma de correo, portadas para redes, un volante y un código QR." loading="eager" decoding="async">
+          <div class="bf-card">
+            <div class="bf-main">
+              <div class="bf-tag">Mejor precio · Inicial + Social</div>
+              <h3>Identidad Completa</h3>
+              <div class="bf-price">$750 <span class="bf-save">MXN · $250 menos que comprar las dos por separado</span></div>
+              <ul class="bf-chips">
+                <li>Logotipo</li><li>Paleta</li><li>Tipografía</li><li>Favicon</li><li>Tarjeta de presentación</li><li>Recursos de WhatsApp</li><li>Firma de correo</li><li>Portadas para redes</li><li>Volante</li><li>Código QR</li>
+              </ul>
+            </div>
+            <div class="bf-cta">
+              <a href="https://buy.stripe.com/aFafZg9pU5UH8JC8Uy9EI0w" class="buy-btn" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Quiero la Identidad Completa</a>
+            </div>
+          </div>
+        </div>
+        <figcaption>Identidad de ejemplo, mostrada para preséntame.</figcaption>
+      </figure>
+
+      <figure class="bf bf--starter">
+        <div class="bf-media">
+          <img src="/assets/images/brand-starter-640.jpg" srcset="/assets/images/brand-starter-640.jpg 640w, /assets/images/brand-starter.jpg 1200w" sizes="(min-width:1220px) 1140px, calc(100vw - 40px)" width="1200" height="833" alt="Identidad inicial: una tarjeta con logotipo, paleta de colores de la marca, muestra de tipografía, favicon, pestaña del navegador y una tarjeta de presentación por ambos lados." loading="lazy" decoding="async">
+          <div class="bf-card">
+            <h3>Identidad Inicial</h3>
+            <div class="bf-price">$500 <span class="bf-save">MXN</span></div>
+            <p class="bf-lead">Todo lo que necesitas para verte con marca propia, entregado rápido.</p>
+            <ul class="bf-list">
+              <li>Logotipo</li>
+              <li>Paleta de colores</li>
+              <li>Combinación de tipografías</li>
+              <li>Favicon</li>
+              <li>Tarjeta de presentación a juego</li>
+            </ul>
+            <div class="cta-row">
+              <a href="https://buy.stripe.com/6oU5kCcC682PcZS7Qu9EI0u" class="buy-btn" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Quiero la Identidad Inicial</a>
+            </div>
+          </div>
+        </div>
+        <figcaption>Identidad de ejemplo, mostrada para preséntame.</figcaption>
+      </figure>
+
+      <figure class="bf bf--social">
+        <div class="bf-media">
+          <img src="/assets/images/brand-social-640.jpg" srcset="/assets/images/brand-social-640.jpg 640w, /assets/images/brand-social.jpg 1200w" sizes="(min-width:1220px) 1140px, calc(100vw - 40px)" width="1200" height="833" alt="Identidad social: un perfil de WhatsApp Business en un celular, una firma de correo, una portada de Facebook, una publicación de Instagram, un volante y un código QR con la marca." loading="lazy" decoding="async">
+          <div class="bf-card">
+            <h3>Identidad Social</h3>
+            <div class="bf-price">$500 <span class="bf-save">MXN</span></div>
+            <p class="bf-lead">Toda tu presencia en línea, resuelta.</p>
+            <ul class="bf-list">
+              <li>Recursos para WhatsApp Business</li>
+              <li>Firma de correo</li>
+              <li>Imágenes y portadas para redes</li>
+              <li>Volante</li>
+              <li>Código QR con tu marca</li>
+            </ul>
+            <div class="cta-row">
+              <a href="https://buy.stripe.com/6oU9AS31w0An6Bu4Ei9EI0v" class="buy-btn" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Quiero la Identidad Social</a>
+            </div>
+          </div>
+        </div>
+        <figcaption>Identidad de ejemplo, mostrada para preséntame.</figcaption>
+      </figure>
+
+      <figure class="bf bf--menu">
+        <div class="bf-media bf-split">
+          <img src="/assets/images/brand-menu-560.jpg" srcset="/assets/images/brand-menu-560.jpg 560w, /assets/images/brand-menu.jpg 960w" sizes="(min-width:1040px) 460px, min(420px, calc(100vw - 40px))" width="960" height="1280" alt="Diseño de menú listo para imprimir de una cafetería ficticia, Café La Esquina: un menú de dos columnas con una tarjeta de mesa a juego, un lápiz y una taza de café." loading="lazy" decoding="async">
+          <div class="bf-card">
+            <h3>Diseño de Menú</h3>
+            <div class="bf-price">$350 <span class="bf-save">MXN</span></div>
+            <p class="bf-lead">Un menú limpio y listo para imprimir para tu negocio. Cualquier tamaño, un solo precio.</p>
+            <ul class="bf-list">
+              <li>Secciones claras, fáciles de leer de un vistazo</li>
+              <li>Armado alrededor de tus platillos y precios</li>
+              <li>Archivo listo para imprimir</li>
+            </ul>
+            <div class="cta-row">
+              <a href="https://buy.stripe.com/aFaeVcfOi2Iv2leeeS9EI0x" class="buy-btn" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">Quiero el Diseño de Menú</a>
+            </div>
+          </div>
+        </div>
+        <figcaption>Menú de ejemplo para una cafetería ficticia, diseñado por preséntame.</figcaption>
+      </figure>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="bundles" class="bundles">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">¿Vas a crear un sitio nuevo? Agrega tu marca al mismo tiempo.</div>
+      <h2>Paquetes con sitio</h2>
+      <p>Combinan la construcción de tu sitio con un paquete de marca. Escríbenos y lo armamos alrededor de tu negocio.</p>
+    </div>
+
+    <div class="bundle-grid">
+
+      <div class="bundle-card">
+        <div class="tag">Sitio + marca</div>
+        <h3>Sitio + Identidad Inicial</h3>
+        <div class="price">$750 + $150/mes de hosting</div>
+        <p class="contents">Un sitio web sencillo con hosting, más tu Identidad Inicial: logotipo, tarjeta de presentación, paleta, tipografía y favicon.</p>
+        <div class="cta-row">
+          <a href="https://wa.me/529811086380?text=Hola%2C%20me%20interesa%20el%20paquete%20Sitio%20%2B%20Identidad%20Inicial%20%28%24750%20MXN%2C%20m%C3%A1s%20%24150%20MXN%2Fmes%20de%20hosting%29.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="ask-btn" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','Lead');}">Pregúntanos →</a>
+        </div>
+      </div>
+
+      <div class="bundle-card">
+        <div class="tag">Sitio + marca</div>
+        <h3>Sitio + Identidad Social</h3>
+        <div class="price">$750 + $150/mes de hosting</div>
+        <p class="contents">Un sitio web sencillo con hosting, más tu Identidad Social: recursos de WhatsApp, firma de correo, portadas para redes, volante y código QR.</p>
+        <div class="cta-row">
+          <a href="https://wa.me/529811086380?text=Hola%2C%20me%20interesa%20el%20paquete%20Sitio%20%2B%20Identidad%20Social%20%28%24750%20MXN%2C%20m%C3%A1s%20%24150%20MXN%2Fmes%20de%20hosting%29.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="ask-btn" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','Lead');}">Pregúntanos →</a>
+        </div>
+      </div>
+
+      <div class="bundle-card">
+        <div class="tag">Sitio + marca</div>
+        <h3>Como Se Debe</h3>
+        <div class="price">$990 + $150/mes de hosting</div>
+        <p class="contents">Un sitio web sencillo con hosting, más tu Identidad Completa: el logotipo, lo impreso y las redes. Tus primeros 3 meses de Fresh van incluidos, así que los cambios por mensaje son ilimitados mientras todo es nuevo.</p>
+        <div class="cta-row">
+          <a href="https://wa.me/529811086380?text=Hola%2C%20me%20interesa%20Como%20Se%20Debe%20%28sitio%20%2B%20identidad%20completa%2C%20%24990%20MXN%20m%C3%A1s%20%24150%20MXN%2Fmes%20de%20hosting%29.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="ask-btn" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','Lead');}">Pregúntanos →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="talk">
+  <div class="wrap">
+    <div class="talk-strip">
+      <div class="talk-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.6 6.32A8.86 8.86 0 0 0 11.94 4C7.03 4 3 8.03 3 12.94c0 1.62.43 3.2 1.24 4.59L3 21l3.56-1.2a8.92 8.92 0 0 0 4.38 1.15h.01c4.92 0 8.94-4.02 8.94-8.94a8.85 8.85 0 0 0-2.29-6.69Zm-5.65 13.77h-.01a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.81.95.95-2.74-.18-.28a7.41 7.41 0 0 1-1.14-3.96c0-4.1 3.34-7.43 7.45-7.43a7.4 7.4 0 0 1 5.27 2.18 7.39 7.39 0 0 1 2.18 5.26c0 4.1-3.35 7.43-7.45 7.43Zm4.08-5.57c-.22-.11-1.32-.65-1.53-.73-.2-.07-.35-.11-.5.11-.15.22-.58.73-.71.88-.13.15-.26.16-.48.05-.22-.11-.93-.34-1.78-1.1-.66-.58-1.1-1.31-1.23-1.53-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.4.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.21-.69-1.65-.18-.43-.36-.37-.5-.38h-.43c-.15 0-.39.05-.59.28-.2.22-.78.76-.78 1.86 0 1.1.8 2.16.91 2.31.11.15 1.58 2.41 3.82 3.38.53.23.95.37 1.27.47.54.17 1.02.15 1.41.09.43-.06 1.32-.54 1.5-1.06.19-.52.19-.96.13-1.06-.06-.09-.2-.15-.42-.26Z" fill="#F7F3EC"/>
+        </svg>
+      </div>
+      <div>
+        <h3>¿Quieres preguntar algo antes?</h3>
+        <p>Escríbenos por WhatsApp. Contesta Glancy en persona, normalmente en menos de una hora.</p>
+      </div>
+      <a href="https://wa.me/529811086380" class="talk-cta" target="_blank" rel="noopener" onclick="if(window.fbq){fbq('track','Lead');}">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="/" class="logo">preséntame<span>.</span></a>
+    <p class="footer-tag">Sitios web para los negocios que mueven Latinoamérica, uno a la vez.</p>
+    <div class="footer-links">
+      <a href="/privacy-policy">Aviso de privacidad</a>
+      <a href="/terms">Términos del servicio</a>
+      <a href="mailto:hola@presentame.online">hola@presentame.online</a>
+    </div>
+    <div class="footer-bottom mono">© 2026 preséntame. Todos los derechos reservados.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.querySelector('.burger'),m=document.getElementById('nav-menu');
+  if(!b||!m)return;
+  function set(o){m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);}
+  b.addEventListener('click',function(e){e.stopPropagation();set(!m.classList.contains('open'));});
+  m.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+  document.addEventListener('click',function(e){if(!e.target.closest('nav'))set(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+  window.addEventListener('resize',function(){if(window.innerWidth>=860)set(false);});
+})();
+</script>
+</body>
+</html>
